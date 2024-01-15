@@ -3,9 +3,9 @@ kind: FlowSchema
 metadata:
   annotations:
     apf.kubernetes.io/autoupdate-spec: "true"
-  creationTimestamp: "2024-01-11T12:00:50Z"
+  creationTimestamp: "2023-12-27T09:42:46Z"
   name: workload-leader-election
-  uid: 6467344c-39de-4dd5-a9a3-ecccf5fe82aa
+  uid: 6902e6b3-3f65-4256-9681-60bef80e0bf1
 spec:
   distinguisherMethod:
     type: ByUser
@@ -42,7 +42,7 @@ spec:
         namespace: kube-system
 status:
   conditions:
-  - lastTransitionTime: "2024-01-11T12:00:50Z"
+  - lastTransitionTime: "2023-12-27T09:42:46Z"
     message: This FlowSchema references the PriorityLevelConfiguration object named
       "leader-election" and it exists
     reason: Found
