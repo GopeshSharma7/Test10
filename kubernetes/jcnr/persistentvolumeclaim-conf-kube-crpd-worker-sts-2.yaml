@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: "2024-01-11T12:07:38Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    k8s-app: kube-crpd-worker
+  name: conf-kube-crpd-worker-sts-2
+  namespace: jcnr
+  uid: 8ba4dd88-3655-4847-90a3-4f63aeb399c7
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 256Mi
+  storageClassName: jcnrstorage
+  volumeMode: Filesystem
+status:
+  phase: Pending

@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  SRGB_INDEX_RANGE: "4000"
+  SRGB_START_LABEL: "400000"
+kind: ConfigMap
+metadata:
+  annotations:
+    meta.helm.sh/release-name: jcnr
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2024-01-11T12:07:38Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: jcnr-node-config
+  namespace: jcnr
+  uid: 46f66001-3da8-4957-ba68-7e6a3f5b392f

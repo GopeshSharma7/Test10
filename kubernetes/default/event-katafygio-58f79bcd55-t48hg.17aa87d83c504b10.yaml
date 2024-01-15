@@ -1,0 +1,25 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-15T13:19:31Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: katafygio-58f79bcd55-t48hg
+  namespace: default
+  resourceVersion: "516120"
+  uid: 8b049811-c8c3-400b-b61d-803d4738113d
+kind: Event
+lastTimestamp: "2024-01-15T13:19:31Z"
+message: Successfully assigned default/katafygio-58f79bcd55-t48hg to trohit-k8s-master-1k3tt0.englab.juniper.net
+metadata:
+  creationTimestamp: "2024-01-15T13:19:31Z"
+  name: katafygio-58f79bcd55-t48hg.17aa87d83c504b10
+  namespace: default
+  uid: 64ea07d8-33d4-401a-9e28-09ee4fba5bd1
+reason: Scheduled
+reportingComponent: default-scheduler
+reportingInstance: ""
+source:
+  component: default-scheduler
+type: Normal

@@ -1,0 +1,25 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-15T13:19:32Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: katafygio-58f79bcd55-t48hg
+  namespace: default
+  resourceVersion: "516129"
+  uid: 8b049811-c8c3-400b-b61d-803d4738113d
+kind: Event
+lastTimestamp: "2024-01-15T13:19:32Z"
+message: Add eth0 [10.244.47.14/32] from k8s-pod-network
+metadata:
+  creationTimestamp: "2024-01-15T13:19:32Z"
+  name: katafygio-58f79bcd55-t48hg.17aa87d85abcc1e4
+  namespace: default
+  uid: 2b005fd8-9201-4391-9dce-ff7b7e9f3f16
+reason: AddedInterface
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: multus
+type: Normal

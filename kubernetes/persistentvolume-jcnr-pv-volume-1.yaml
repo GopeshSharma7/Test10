@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    meta.helm.sh/release-name: jcnr
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2024-01-11T12:07:38Z"
+  finalizers:
+  - kubernetes.io/pv-protection
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: jcnr-pv-volume-1
+  uid: 3f870eed-9420-4414-b35e-c8c909dbce1e
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 256Mi
+  hostPath:
+    path: /etc/crpd
+    type: ""
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: jcnrstorage
+  volumeMode: Filesystem
+status:
+  phase: Available

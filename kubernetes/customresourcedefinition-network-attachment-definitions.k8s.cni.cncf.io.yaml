@@ -1,0 +1,52 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  creationTimestamp: "2024-01-11T12:06:57Z"
+  name: network-attachment-definitions.k8s.cni.cncf.io
+  uid: 43ce3746-7161-4d05-b365-49db56660d47
+spec:
+  conversion:
+    strategy: None
+  group: k8s.cni.cncf.io
+  names:
+    kind: NetworkAttachmentDefinition
+    listKind: NetworkAttachmentDefinitionList
+    plural: network-attachment-definitions
+    shortNames:
+    - net-attach-def
+    singular: network-attachment-definition
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          spec:
+            properties:
+              config:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: NetworkAttachmentDefinition
+    listKind: NetworkAttachmentDefinitionList
+    plural: network-attachment-definitions
+    shortNames:
+    - net-attach-def
+    singular: network-attachment-definition
+  conditions:
+  - lastTransitionTime: "2024-01-11T12:06:57Z"
+    message: no conflicts found
+    reason: NoConflicts
+    status: "True"
+    type: NamesAccepted
+  - lastTransitionTime: "2024-01-11T12:06:57Z"
+    message: the initial names have been accepted
+    reason: InitialNamesAccepted
+    status: "True"
+    type: Established
+  storedVersions:
+  - v1

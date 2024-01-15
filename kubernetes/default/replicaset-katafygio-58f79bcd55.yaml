@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "1"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2024-01-15T13:19:31Z"
+  labels:
+    app: katafygio
+    chart: katafygio-0.5.1
+    heritage: Helm
+    pod-template-hash: 58f79bcd55
+    release: katafygio
+  name: katafygio-58f79bcd55
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: katafygio
+    uid: bbcf7e67-a1f1-4417-84ae-2b3b31c4bbaf
+  uid: 38414e70-af9a-42f2-ad98-1ae2df9bc2bd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: katafygio
+      pod-template-hash: 58f79bcd55
+      release: katafygio
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: katafygio
+        chart: katafygio-0.5.1
+        heritage: Helm
+        pod-template-hash: 58f79bcd55
+        release: katafygio
+    spec:
+      containers:
+      - args:
+        - --local-dir=/var/lib/katafygio/data
+        - --healthcheck-port=8080
+        - --log-level=info
+        - --log-output=stdout
+        - --resync-interval=300
+        - --exclude-kind=replicasets
+        - --exclude-kind=endpoints
+        - --exclude-kind=events
+        command:
+        - sleep
+        - infinity
+        image: svl-artifactory.juniper.net/atom-docker/cn2/sharmag07/katafygio:h2
+        imagePullPolicy: Always
+        name: katafygio
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/katafygio/data
+          name: katafygio-data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 65534
+        runAsGroup: 65534
+        runAsUser: 65534
+      serviceAccount: katafygio
+      serviceAccountName: katafygio
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: katafygio-data
+        persistentVolumeClaim:
+          claimName: katafygio
+status:
+  availableReplicas: 1
+  fullyLabeledReplicas: 1
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1

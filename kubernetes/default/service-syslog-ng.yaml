@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: jcnr
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2024-01-11T12:07:38Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: syslog-ng
+  name: syslog-ng
+  namespace: default
+  uid: 0bbba40e-0a9c-4da9-a54a-c6484d3d1dca
+spec:
+  clusterIP: 10.10.10.60
+  clusterIPs:
+  - 10.10.10.60
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: syslog-tcp
+    port: 601
+    protocol: TCP
+    targetPort: 6601
+  - name: syslog-udp
+    port: 514
+    protocol: UDP
+    targetPort: 5514
+  selector:
+    app.kubernetes.io/name: syslog-ng
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

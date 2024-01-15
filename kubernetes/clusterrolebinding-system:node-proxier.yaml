@@ -1,0 +1,18 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2024-01-11T12:00:51Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  name: system:node-proxier
+  uid: d994d3e4-5d00-4164-9632-2d0ea0a95479
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:node-proxier
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: system:kube-proxy

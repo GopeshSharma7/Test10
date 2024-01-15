@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2024-01-11T12:00:51Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  name: system:node
+  uid: f85acecd-8363-4a72-be7a-077a9839f511
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:node

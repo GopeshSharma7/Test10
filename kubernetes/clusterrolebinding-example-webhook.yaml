@@ -1,0 +1,17 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"annotations":{},"name":"example-webhook"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"example-webhook"},"subjects":[{"kind":"ServiceAccount","name":"example-webhook","namespace":"default"}]}
+  creationTimestamp: "2024-01-15T11:09:51Z"
+  name: example-webhook
+  uid: 282b4b8d-1ebf-4b19-8648-b16e4d3e8019
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: example-webhook
+subjects:
+- kind: ServiceAccount
+  name: example-webhook
+  namespace: default

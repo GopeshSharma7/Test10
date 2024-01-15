@@ -1,0 +1,132 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: 3847c805a099500cf9ba1840ca6a6ee56dac180334f1116842aeda6afbd4d8d9
+    cni.projectcalico.org/podIP: 10.244.26.66/32
+    cni.projectcalico.org/podIPs: 10.244.26.66/32
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "k8s-pod-network",
+          "ips": [
+              "10.244.26.66"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "k8s-pod-network",
+          "ips": [
+              "10.244.26.66"
+          ],
+          "default": true,
+          "dns": {}
+      }]
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"name":"netshoot-pod","namespace":"default"},"spec":{"containers":[{"command":["bash","-c","while true; do sleep 60s; done"],"image":"svl-artifactory.juniper.net/atom-docker/cn2/bazel-build/dev/netshoot:v1","imagePullPolicy":"IfNotPresent","name":"toolbox","securityContext":{"capabilities":{"add":["NET_ADMIN"]},"privileged":true}}],"tolerations":[{"effect":"NoSchedule","key":"key","operator":"Equal","value":"value"}]}}
+  creationTimestamp: "2024-01-11T12:24:16Z"
+  name: netshoot-pod
+  namespace: default
+  uid: ef599496-24fe-4a13-b145-0eab19be5e83
+spec:
+  containers:
+  - command:
+    - bash
+    - -c
+    - while true; do sleep 60s; done
+    image: svl-artifactory.juniper.net/atom-docker/cn2/bazel-build/dev/netshoot:v1
+    imagePullPolicy: IfNotPresent
+    name: toolbox
+    resources: {}
+    securityContext:
+      capabilities:
+        add:
+        - NET_ADMIN
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-chfch
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: key
+    operator: Equal
+    value: value
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-chfch
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-11T12:24:16Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-11T12:24:23Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-11T12:24:23Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-11T12:24:16Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://51d7635fc20638bc574fbdbd5e598a8e92d94e6a1ae45ab3e342c180f15c3f21
+    image: svl-artifactory.juniper.net/atom-docker/cn2/bazel-build/dev/netshoot:v1
+    imageID: f56a7d7fefd7e544e3a871263b91ed9e0fc8a2007c40956b79da3256840aef45
+    lastState: {}
+    name: toolbox
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-01-11T12:24:23Z"
+  hostIP: 192.168.1.3
+  phase: Running
+  podIP: 10.244.26.66
+  podIPs:
+  - ip: 10.244.26.66
+  qosClass: BestEffort
+  startTime: "2024-01-11T12:24:16Z"

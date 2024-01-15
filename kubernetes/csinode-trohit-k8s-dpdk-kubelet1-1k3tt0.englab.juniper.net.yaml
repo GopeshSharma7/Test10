@@ -1,0 +1,15 @@
+apiVersion: storage.k8s.io/v1
+kind: CSINode
+metadata:
+  annotations:
+    storage.alpha.kubernetes.io/migrated-plugins: kubernetes.io/aws-ebs,kubernetes.io/azure-disk,kubernetes.io/azure-file,kubernetes.io/cinder,kubernetes.io/gce-pd,kubernetes.io/vsphere-volume
+  creationTimestamp: "2024-01-11T12:05:56Z"
+  name: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+    uid: d48c65d3-c988-4993-9311-d53201535f9a
+  uid: 1ec92547-8469-4afc-b8f8-7bc6220523f6
+spec:
+  drivers: null

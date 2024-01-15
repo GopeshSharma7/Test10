@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-01-11T12:07:46Z"
+  name: contrail-vrouter-nodes-configmap
+  namespace: contrail
+  uid: 2fc2670e-326a-49c8-b4fc-9cdbb61d3832

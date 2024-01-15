@@ -1,0 +1,13 @@
+apiVersion: crd.projectcalico.org/v1
+kind: BlockAffinity
+metadata:
+  annotations:
+    projectcalico.org/metadata: '{"creationTimestamp":null}'
+  creationTimestamp: "2024-01-11T12:06:31Z"
+  name: trohit-k8s-master-1k3tt0.englab.juniper.net-10-244-47-0-26
+  uid: cfb888cd-5310-45bf-be56-402a8d95f86c
+spec:
+  cidr: 10.244.47.0/26
+  deleted: "false"
+  node: trohit-k8s-master-1k3tt0.englab.juniper.net
+  state: confirmed

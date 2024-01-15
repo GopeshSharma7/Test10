@@ -1,0 +1,207 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-01-11T12:06:57Z"
+  generateName: kube-multus-ds-
+  labels:
+    app: multus
+    controller-revision-hash: 5c99f97fdf
+    name: multus
+    pod-template-generation: "1"
+    tier: node
+  name: kube-multus-ds-5rmzs
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: kube-multus-ds
+    uid: 1c891837-e6b1-4b9a-ba0a-4f39c4377253
+  uid: 1e0cff54-a54d-44fe-b94d-07b74206f0d2
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - trohit-k8s-master-1k3tt0.englab.juniper.net
+  containers:
+  - args:
+    - --multus-conf-file=auto
+    - --cni-version=0.3.1
+    command:
+    - /entrypoint.sh
+    image: ghcr.io/k8snetworkplumbingwg/multus-cni:v3.8
+    imagePullPolicy: IfNotPresent
+    name: kube-multus
+    resources:
+      limits:
+        cpu: 100m
+        memory: 50Mi
+      requests:
+        cpu: 100m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /host/etc/cni/net.d
+      name: cni
+    - mountPath: /host/opt/cni/bin
+      name: cnibin
+    - mountPath: /tmp/multus-conf
+      name: multus-cfg
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rj4hj
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - command:
+    - cp
+    - /usr/src/multus-cni/bin/multus
+    - /host/opt/cni/bin/multus
+    image: ghcr.io/k8snetworkplumbingwg/multus-cni:v3.8
+    imagePullPolicy: IfNotPresent
+    name: install-multus-binary
+    resources:
+      requests:
+        cpu: 10m
+        memory: 15Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /host/opt/cni/bin
+      mountPropagation: Bidirectional
+      name: cnibin
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-rj4hj
+      readOnly: true
+  nodeName: trohit-k8s-master-1k3tt0.englab.juniper.net
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: multus
+  serviceAccountName: multus
+  terminationGracePeriodSeconds: 10
+  tolerations:
+  - effect: NoSchedule
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/disk-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/pid-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/unschedulable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/network-unavailable
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/cni/net.d
+      type: ""
+    name: cni
+  - hostPath:
+      path: /opt/cni/bin
+      type: ""
+    name: cnibin
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: cni-conf.json
+        path: 70-multus.conf
+      name: multus-cni-config
+    name: multus-cfg
+  - name: kube-api-access-rj4hj
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-11T12:07:05Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-11T12:07:06Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-11T12:07:06Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-11T12:06:57Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://f4e204e9fecdf8ed6256ea88ce061e31f7ad50a80b0edf9d3827c62606cf5431
+    image: ghcr.io/k8snetworkplumbingwg/multus-cni:v3.8
+    imageID: c65d3833b509f9769a2e37ee7c68d6fbe54a47540b19a436455a9ee596b41100
+    lastState: {}
+    name: kube-multus
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-01-11T12:07:05Z"
+  hostIP: 192.168.1.2
+  initContainerStatuses:
+  - containerID: cri-o://c0a6d01f5d5e963266dbf574d23681d7e6cdb0988317060bcc30735cbab2d333
+    image: ghcr.io/k8snetworkplumbingwg/multus-cni:v3.8
+    imageID: c65d3833b509f9769a2e37ee7c68d6fbe54a47540b19a436455a9ee596b41100
+    lastState: {}
+    name: install-multus-binary
+    ready: true
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://c0a6d01f5d5e963266dbf574d23681d7e6cdb0988317060bcc30735cbab2d333
+        exitCode: 0
+        finishedAt: "2024-01-11T12:07:04Z"
+        reason: Completed
+        startedAt: "2024-01-11T12:07:04Z"
+  phase: Running
+  podIP: 192.168.1.2
+  podIPs:
+  - ip: 192.168.1.2
+  qosClass: Burstable
+  startTime: "2024-01-11T12:06:57Z"

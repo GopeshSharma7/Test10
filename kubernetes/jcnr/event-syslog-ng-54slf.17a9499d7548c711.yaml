@@ -1,0 +1,27 @@
+apiVersion: v1
+count: 4636
+eventTime: null
+firstTimestamp: "2024-01-11T12:07:54Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: syslog-ng-54slf
+  namespace: jcnr
+  resourceVersion: "1341"
+  uid: 69857d69-5619-4556-a536-80d446af8097
+kind: Event
+lastTimestamp: "2024-01-15T13:18:51Z"
+message: 'Nameserver limits were exceeded, some nameservers have been omitted, the
+  applied nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
+metadata:
+  creationTimestamp: "2024-01-11T12:07:54Z"
+  name: syslog-ng-54slf.17a9499d7548c711
+  namespace: jcnr
+  uid: 7246ac69-6ad3-4541-8b05-bf009fae252f
+reason: DNSConfigForming
+reportingComponent: kubelet
+reportingInstance: trohit-k8s-master-1k3tt0.englab.juniper.net
+source:
+  component: kubelet
+  host: trohit-k8s-master-1k3tt0.englab.juniper.net
+type: Warning

@@ -1,0 +1,28 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-15T13:19:32Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{katafygio}
+  kind: Pod
+  name: katafygio-58f79bcd55-t48hg
+  namespace: default
+  resourceVersion: "516125"
+  uid: 8b049811-c8c3-400b-b61d-803d4738113d
+kind: Event
+lastTimestamp: "2024-01-15T13:19:32Z"
+message: Successfully pulled image "svl-artifactory.juniper.net/atom-docker/cn2/sharmag07/katafygio:h2"
+  in 69ms (69ms including waiting)
+metadata:
+  creationTimestamp: "2024-01-15T13:19:32Z"
+  name: katafygio-58f79bcd55-t48hg.17aa87d8615f17bf
+  namespace: default
+  uid: f10929f9-4e69-41c9-bb5e-caa87419a3b0
+reason: Pulled
+reportingComponent: kubelet
+reportingInstance: trohit-k8s-master-1k3tt0.englab.juniper.net
+source:
+  component: kubelet
+  host: trohit-k8s-master-1k3tt0.englab.juniper.net
+type: Normal
