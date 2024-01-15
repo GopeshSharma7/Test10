@@ -3,12 +3,12 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2024-01-11T12:06:17Z"
+  creationTimestamp: "2023-12-27T09:46:15Z"
   labels:
     k8s-app: calico-kube-controllers
   name: calico-kube-controllers
   namespace: kube-system
-  uid: 1fdae7a6-f104-43ef-964e-b1ec43df62f3
+  uid: ccd6cb38-0005-4ea1-b498-7bccea0e067d
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -77,14 +77,14 @@ spec:
 status:
   availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:36Z"
-    lastUpdateTime: "2024-01-11T12:06:36Z"
+  - lastTransitionTime: "2023-12-27T09:46:46Z"
+    lastUpdateTime: "2023-12-27T09:46:46Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2024-01-11T12:06:17Z"
-    lastUpdateTime: "2024-01-11T12:06:36Z"
+  - lastTransitionTime: "2023-12-27T09:46:15Z"
+    lastUpdateTime: "2023-12-27T09:46:46Z"
     message: ReplicaSet "calico-kube-controllers-86f8947565" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"

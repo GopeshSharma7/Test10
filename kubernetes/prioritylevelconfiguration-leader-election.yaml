@@ -3,9 +3,9 @@ kind: PriorityLevelConfiguration
 metadata:
   annotations:
     apf.kubernetes.io/autoupdate-spec: "true"
-  creationTimestamp: "2024-01-11T12:00:50Z"
+  creationTimestamp: "2023-12-27T09:42:46Z"
   name: leader-election
-  uid: ee9e15dc-ac3e-4ecc-97f2-87b7d56e2582
+  uid: 5426bbd7-3a51-4f2b-9666-b52cb714412a
 spec:
   limited:
     assuredConcurrencyShares: 10

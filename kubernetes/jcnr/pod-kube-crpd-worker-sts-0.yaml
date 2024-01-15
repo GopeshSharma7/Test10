@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:47Z"
   generateName: kube-crpd-worker-sts-
   labels:
     apps.kubernetes.io/pod-index: "0"
-    controller-revision-hash: kube-crpd-worker-sts-77c8846d57
+    controller-revision-hash: kube-crpd-worker-sts-85c4564ff4
     k8s-app: kube-crpd-worker
     statefulset.kubernetes.io/pod-name: kube-crpd-worker-sts-0
   name: kube-crpd-worker-sts-0
@@ -16,8 +16,8 @@ metadata:
     controller: true
     kind: StatefulSet
     name: kube-crpd-worker-sts
-    uid: 2fbf261d-fa78-4513-b195-3631c9001f61
-  uid: e3b3854c-bab5-423e-9098-b414806a72fa
+    uid: f046b808-435e-4945-96ca-975a05920ac5
+  uid: c23f0f12-0cda-45e7-8c9d-8b877547e7dc
 spec:
   affinity:
     nodeAffinity:
@@ -60,7 +60,7 @@ spec:
     - name: SYSLOG_REMOTE_DEST
       value: '@127.0.0.1:50055'
     - name: VROUTER_GRPC_PORT
-    image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpd:23.4R1.9
+    image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpd:23.4R1.7
     imagePullPolicy: IfNotPresent
     lifecycle:
       postStart:
@@ -117,7 +117,7 @@ spec:
     - mountPath: /var/crash
       name: crash
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-dmth6
+      name: kube-api-access-m7bhs
       readOnly: true
   - command:
     - /telemetry-exporter
@@ -134,7 +134,7 @@ spec:
       value: crpd
     - name: NAMESPACE
       value: jcnr
-    image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
+    image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
     imagePullPolicy: IfNotPresent
     name: jcnr-crpd-telemetry-exporter
     ports:
@@ -153,7 +153,7 @@ spec:
     - mountPath: /etc/secrets
       name: secrets
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-dmth6
+      name: kube-api-access-m7bhs
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
@@ -185,7 +185,7 @@ spec:
     - mountPath: /opt/jcnr-custom-config
       name: jcnr-custom-config
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-dmth6
+      name: kube-api-access-m7bhs
       readOnly: true
   - env:
     - name: NODE_IP
@@ -222,7 +222,7 @@ spec:
       value: /var/log/jcnr/
     - name: CNI_LOG_LEVEL
       value: info
-    image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/jcnr-cni:master-20231228-97ba7a8
+    image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/jcnr-cni:master-20231221-e0f6d72
     imagePullPolicy: IfNotPresent
     name: install-cni
     resources: {}
@@ -251,9 +251,9 @@ spec:
     - mountPath: /etc/localtime
       name: host-time
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-dmth6
+      name: kube-api-access-m7bhs
       readOnly: true
-  nodeName: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+  nodeName: sharmag-k8s-dpdk-kubelet1-pnad30.englab.juniper.net
   preemptionPolicy: PreemptLowerPriority
   priority: 0
   restartPolicy: Always
@@ -328,7 +328,7 @@ spec:
       name: telemetry-exporter-overrides-configmap
       optional: true
     name: telemetry-exporter-overrides
-  - name: kube-api-access-dmth6
+  - name: kube-api-access-m7bhs
     projected:
       defaultMode: 420
       sources:
@@ -349,25 +349,25 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-11T12:07:56Z"
+    lastTransitionTime: "2023-12-27T09:48:01Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-11T12:08:30Z"
+    lastTransitionTime: "2023-12-27T09:48:38Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-11T12:08:30Z"
+    lastTransitionTime: "2023-12-27T09:48:38Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-11T12:07:39Z"
+    lastTransitionTime: "2023-12-27T09:47:48Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: cri-o://07831d1d59d6b06063a101e3155bae7f528d2697e4d91575fa2a1e010e5c0aac
-    image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
-    imageID: 4f93c0954d18da04c11dd5700666ce2a49613190d8449e4dcefa5f781c2437b4
+  - containerID: cri-o://edab8e3070ee4c3515848edac375d089aa9b55582e592b22d07e165abbc601e2
+    image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
+    imageID: 74442f1336697f386f1f32c0f2fe3859643fd397cf29919b151ee74c269a2a4c
     lastState: {}
     name: jcnr-crpd-telemetry-exporter
     ready: true
@@ -375,10 +375,10 @@ status:
     started: true
     state:
       running:
-        startedAt: "2024-01-11T12:08:18Z"
-  - containerID: cri-o://e178a33bf0d03980e1ffd912b5fdea7648d8a121d6826fe6b523eecf158eeaff
-    image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpd:23.4R1.9
-    imageID: 9ed2949df81f85f5411f151abd9b7fb6ec334fb986638404ef0822f4079c5318
+        startedAt: "2023-12-27T09:48:24Z"
+  - containerID: cri-o://a51b6336734bc40bb82556b4af577fc8dee51c62ddcb82e564582f625832f491
+    image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpd:23.4R1.7
+    imageID: 8575b4f0beaa467c801ff9eaa080ad3d4a286952dbc0de1dde7336dddb19da11
     lastState: {}
     name: kube-crpd-worker
     ready: true
@@ -386,10 +386,10 @@ status:
     started: true
     state:
       running:
-        startedAt: "2024-01-11T12:08:07Z"
+        startedAt: "2023-12-27T09:48:13Z"
   hostIP: 192.168.1.3
   initContainerStatuses:
-  - containerID: cri-o://ea0fe6ac1a0c5df32505b3d09f0a9499723960ef7e59e5eed8031f7097b21f4d
+  - containerID: cri-o://01f53ef1a01fc52634a411e998522590c72a100f0afe14d0f3272f5a289d8f94
     image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpdconfig-generator:v21
     imageID: b0804dda66d833cb2e4b2847807b0ccb1ec1f87c467c20e9779bbc3f088c493b
     lastState: {}
@@ -399,14 +399,14 @@ status:
     started: false
     state:
       terminated:
-        containerID: cri-o://ea0fe6ac1a0c5df32505b3d09f0a9499723960ef7e59e5eed8031f7097b21f4d
+        containerID: cri-o://01f53ef1a01fc52634a411e998522590c72a100f0afe14d0f3272f5a289d8f94
         exitCode: 0
-        finishedAt: "2024-01-11T12:07:50Z"
+        finishedAt: "2023-12-27T09:47:58Z"
         reason: Completed
-        startedAt: "2024-01-11T12:07:44Z"
-  - containerID: cri-o://945c68625e66d7cd73871423f81025107a8a451b8b8fe85edc42e02fec635bfe
-    image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/jcnr-cni:master-20231228-97ba7a8
-    imageID: 669142a1d7d3b44e9444755baa9637b2604b026fd1ace46d39cdc9f0a4fae260
+        startedAt: "2023-12-27T09:47:53Z"
+  - containerID: cri-o://efa16c63ec758a4416ee33ed14eb18525952b8d22e735b8c13c22052509ce5d5
+    image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/jcnr-cni:master-20231221-e0f6d72
+    imageID: 715d8f3ab1e31e1c34e67f3bbf1875dffa44c13c0c3d2edcedc0781850fee4be
     lastState: {}
     name: install-cni
     ready: true
@@ -414,14 +414,14 @@ status:
     started: false
     state:
       terminated:
-        containerID: cri-o://945c68625e66d7cd73871423f81025107a8a451b8b8fe85edc42e02fec635bfe
+        containerID: cri-o://efa16c63ec758a4416ee33ed14eb18525952b8d22e735b8c13c22052509ce5d5
         exitCode: 0
-        finishedAt: "2024-01-11T12:07:56Z"
+        finishedAt: "2023-12-27T09:48:01Z"
         reason: Completed
-        startedAt: "2024-01-11T12:07:56Z"
+        startedAt: "2023-12-27T09:48:00Z"
   phase: Running
   podIP: 192.168.1.3
   podIPs:
   - ip: 192.168.1.3
   qosClass: BestEffort
-  startTime: "2024-01-11T12:07:39Z"
+  startTime: "2023-12-27T09:47:48Z"

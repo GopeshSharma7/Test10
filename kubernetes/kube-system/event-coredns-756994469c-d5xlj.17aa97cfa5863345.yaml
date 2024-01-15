@@ -1,0 +1,25 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-15T18:12:07Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: coredns-756994469c-d5xlj
+  namespace: kube-system
+  resourceVersion: "2471237"
+  uid: 01eaa7b9-9806-4321-8173-3cd80a4e1f5c
+kind: Event
+lastTimestamp: "2024-01-15T18:12:07Z"
+message: Add eth0 [10.244.100.204/32] from k8s-pod-network
+metadata:
+  creationTimestamp: "2024-01-15T18:12:07Z"
+  name: coredns-756994469c-d5xlj.17aa97cfa5863345
+  namespace: kube-system
+  uid: 0b9c7f64-a278-426e-b558-be338c413ecb
+reason: AddedInterface
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: multus
+type: Normal

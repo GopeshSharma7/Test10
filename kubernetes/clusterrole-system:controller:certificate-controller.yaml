@@ -3,11 +3,11 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
   name: system:controller:certificate-controller
-  uid: c5266311-2f5e-4cc2-a624-b76729d36735
+  uid: f129aade-7ee5-41fc-be9d-2e52cb572350
 rules:
 - apiGroups:
   - certificates.k8s.io

@@ -3,12 +3,12 @@ kind: Role
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
   name: system:controller:bootstrap-signer
   namespace: kube-public
-  uid: 70f183f5-ed0b-4601-b14d-410a0dbbe6f7
+  uid: 07d22f33-0370-4d7d-8855-20b0d40bf0a9
 rules:
 - apiGroups:
   - ""

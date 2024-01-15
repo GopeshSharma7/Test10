@@ -2,10 +2,10 @@ apiVersion: crd.projectcalico.org/v1
 kind: IPPool
 metadata:
   annotations:
-    projectcalico.org/metadata: '{"uid":"b0740902-83e8-4171-89a1-31a73680cf31","creationTimestamp":"2024-01-11T12:06:31Z"}'
-  creationTimestamp: "2024-01-11T12:06:31Z"
+    projectcalico.org/metadata: '{"uid":"c67c850d-172a-440b-a7f8-f0dc2cb721e2","creationTimestamp":"2023-12-27T09:46:29Z"}'
+  creationTimestamp: "2023-12-27T09:46:29Z"
   name: default-ipv4-ippool
-  uid: 0da06941-6944-449f-b035-b4b300ab28e8
+  uid: 13a714d1-cd47-4efc-8db2-031d04cbfe7e
 spec:
   allowedUses:
   - Workload

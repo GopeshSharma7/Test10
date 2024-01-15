@@ -4,11 +4,11 @@ metadata:
   annotations:
     helm.sh/hook: pre-install
     helm.sh/hook-weight: "10"
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     jcnr: "true"
   name: ops-rolebinding
-  uid: dbc1beb2-3265-4375-9339-2fc8f5f05c25
+  uid: f8d81952-7b8f-4541-860d-57ea3d3a97fd
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

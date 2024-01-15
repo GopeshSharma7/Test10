@@ -4,11 +4,11 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
   name: contrail-system-role
-  uid: 0d5e0117-7a16-4908-8945-23faad9319fe
+  uid: 041e5840-c373-4439-8a28-aae93affb577
 rules:
 - apiGroups:
   - '*'

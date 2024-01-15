@@ -4,13 +4,13 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
     k8s-app: kube-crpd-worker
   name: kube-crpd-worker-sts
   namespace: jcnr
-  uid: 2fbf261d-fa78-4513-b195-3631c9001f61
+  uid: f046b808-435e-4945-96ca-975a05920ac5
 spec:
   persistentVolumeClaimRetentionPolicy:
     whenDeleted: Retain
@@ -69,7 +69,7 @@ spec:
         - name: SYSLOG_REMOTE_DEST
           value: '@127.0.0.1:50055'
         - name: VROUTER_GRPC_PORT
-        image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpd:23.4R1.9
+        image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpd:23.4R1.7
         imagePullPolicy: IfNotPresent
         lifecycle:
           postStart:
@@ -140,7 +140,7 @@ spec:
           value: crpd
         - name: NAMESPACE
           value: jcnr
-        image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
+        image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
         imagePullPolicy: IfNotPresent
         name: jcnr-crpd-telemetry-exporter
         ports:
@@ -220,7 +220,7 @@ spec:
           value: /var/log/jcnr/
         - name: CNI_LOG_LEVEL
           value: info
-        image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/jcnr-cni:master-20231228-97ba7a8
+        image: svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/jcnr-cni:master-20231221-e0f6d72
         imagePullPolicy: IfNotPresent
         name: install-cni
         resources: {}
@@ -332,9 +332,9 @@ status:
   availableReplicas: 2
   collisionCount: 0
   currentReplicas: 3
-  currentRevision: kube-crpd-worker-sts-77c8846d57
+  currentRevision: kube-crpd-worker-sts-85c4564ff4
   observedGeneration: 1
   readyReplicas: 2
   replicas: 3
-  updateRevision: kube-crpd-worker-sts-77c8846d57
+  updateRevision: kube-crpd-worker-sts-85c4564ff4
   updatedReplicas: 3

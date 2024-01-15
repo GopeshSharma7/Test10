@@ -111,7 +111,7 @@ metadata:
     deprecated.daemonset.template.generation: "1"
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/name: syslog-ng
     controller-revision-hash: 549d4b96c
@@ -123,6 +123,6 @@ metadata:
     controller: true
     kind: DaemonSet
     name: syslog-ng
-    uid: 1cf4d560-86cc-43c2-a242-b0c40a39fbfa
-  uid: 68f0e257-678b-4e51-a67b-d90e36ce770e
+    uid: 5d514036-0e2a-424f-a305-e86317f96bb0
+  uid: da3a5cdc-4386-4413-b8dd-12afd33068f1
 revision: 1

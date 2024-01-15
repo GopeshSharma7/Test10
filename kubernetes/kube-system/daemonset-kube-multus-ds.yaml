@@ -3,14 +3,14 @@ kind: DaemonSet
 metadata:
   annotations:
     deprecated.daemonset.template.generation: "1"
-  creationTimestamp: "2024-01-11T12:06:57Z"
+  creationTimestamp: "2023-12-27T09:47:05Z"
   labels:
     app: multus
     name: multus
     tier: node
   name: kube-multus-ds
   namespace: kube-system
-  uid: 1c891837-e6b1-4b9a-ba0a-4f39c4377253
+  uid: 7fe05ca2-5ee9-4a68-ad36-19f6a4e5b981
 spec:
   revisionHistoryLimit: 10
   selector:

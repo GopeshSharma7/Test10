@@ -3,12 +3,12 @@ kind: DaemonSet
 metadata:
   annotations:
     deprecated.daemonset.template.generation: "1"
-  creationTimestamp: "2024-01-11T12:06:16Z"
+  creationTimestamp: "2023-12-27T09:46:14Z"
   labels:
     k8s-app: calico-node
   name: calico-node
   namespace: kube-system
-  uid: 602a0cd6-285b-4aa4-a447-99be78940088
+  uid: c92f21a1-a56c-4fa9-8c5b-73a28beee9fe
 spec:
   revisionHistoryLimit: 10
   selector:

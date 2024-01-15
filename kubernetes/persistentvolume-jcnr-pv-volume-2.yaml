@@ -5,13 +5,13 @@ metadata:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
     pv.kubernetes.io/bound-by-controller: "yes"
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   finalizers:
   - kubernetes.io/pv-protection
   labels:
     app.kubernetes.io/managed-by: Helm
   name: jcnr-pv-volume-2
-  uid: d48a60ac-adfb-4574-be2b-57aae2409ee6
+  uid: 2fa0dcee-7dd8-444e-9d62-9261186ed862
 spec:
   accessModes:
   - ReadWriteOnce
@@ -20,10 +20,10 @@ spec:
   claimRef:
     apiVersion: v1
     kind: PersistentVolumeClaim
-    name: conf-kube-crpd-worker-sts-1
+    name: conf-kube-crpd-worker-sts-0
     namespace: jcnr
-    resourceVersion: "1373"
-    uid: 7347600a-82a4-49f2-979d-f909eb82938c
+    resourceVersion: "1265"
+    uid: 261631fc-dc39-4449-98a7-7d606265d8a5
   hostPath:
     path: /etc/crpd
     type: ""

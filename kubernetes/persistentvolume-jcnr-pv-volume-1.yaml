@@ -4,13 +4,13 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   finalizers:
   - kubernetes.io/pv-protection
   labels:
     app.kubernetes.io/managed-by: Helm
   name: jcnr-pv-volume-1
-  uid: 3f870eed-9420-4414-b35e-c8c909dbce1e
+  uid: b8580a6f-49a4-4b4c-b1dc-8a0c65f353d4
 spec:
   accessModes:
   - ReadWriteOnce

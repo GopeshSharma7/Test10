@@ -1,9 +1,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  creationTimestamp: "2024-01-11T12:00:52Z"
+  creationTimestamp: "2023-12-27T09:42:48Z"
   name: kubeadm:get-nodes
-  uid: edf409e8-f6e2-426f-80f1-e2830e3635b5
+  uid: a6351bcb-5318-44ad-a5d3-ce36f7ef1a32
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

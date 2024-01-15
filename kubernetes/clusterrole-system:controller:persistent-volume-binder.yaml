@@ -3,11 +3,11 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
   name: system:controller:persistent-volume-binder
-  uid: 02e74974-153f-41d6-8261-953d0cceebb3
+  uid: 267e7785-6265-4cc2-bb45-26493b067246
 rules:
 - apiGroups:
   - ""

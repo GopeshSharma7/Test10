@@ -3,11 +3,11 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
   name: system:controller:horizontal-pod-autoscaler
-  uid: 0a047a48-33fe-4a3f-a7ed-8b5300f7e9b3
+  uid: 0a92522f-f5f3-43a9-9d87-fc842a7b9aae
 rules:
 - apiGroups:
   - autoscaling

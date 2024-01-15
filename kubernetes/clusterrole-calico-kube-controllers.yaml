@@ -1,9 +1,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  creationTimestamp: "2024-01-11T12:06:16Z"
+  creationTimestamp: "2023-12-27T09:46:14Z"
   name: calico-kube-controllers
-  uid: efcbc3d2-b002-4db8-929d-27860b1ebc12
+  uid: a9525906-a85b-41ce-b38b-b95e5d4764e6
 rules:
 - apiGroups:
   - ""

@@ -3,9 +3,9 @@ kind: PriorityLevelConfiguration
 metadata:
   annotations:
     apf.kubernetes.io/autoupdate-spec: "true"
-  creationTimestamp: "2024-01-11T12:00:50Z"
+  creationTimestamp: "2023-12-27T09:42:46Z"
   name: catch-all
-  uid: 1373ed0e-fd8a-4c62-9f0a-6147b7239995
+  uid: 59ab0ec3-fcb3-490d-952b-4e8d8d507d4c
 spec:
   limited:
     assuredConcurrencyShares: 5

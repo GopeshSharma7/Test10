@@ -3,11 +3,11 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
   name: system:controller:cronjob-controller
-  uid: 28b2a187-e36d-44b8-849c-013f02007345
+  uid: 21245d55-eb09-493e-b912-8239eb0d2478
 rules:
 - apiGroups:
   - batch

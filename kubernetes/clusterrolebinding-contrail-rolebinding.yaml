@@ -4,11 +4,11 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
   name: contrail-rolebinding
-  uid: 693ca58b-a7e9-481b-bba8-bd663a3be9fc
+  uid: 43883739-9d58-4e00-9ff0-d8da4d3985d7
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

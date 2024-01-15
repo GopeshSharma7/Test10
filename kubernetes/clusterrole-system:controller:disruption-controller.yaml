@@ -3,11 +3,11 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
   name: system:controller:disruption-controller
-  uid: 3546ef16-3cad-45c8-b134-1a7d06c3bf28
+  uid: 57dd44be-7cdd-4469-85fe-fb1f4dbba277
 rules:
 - apiGroups:
   - apps

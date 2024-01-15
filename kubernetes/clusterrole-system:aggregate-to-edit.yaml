@@ -3,12 +3,12 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
     rbac.authorization.k8s.io/aggregate-to-edit: "true"
   name: system:aggregate-to-edit
-  uid: a57d3502-5ce9-4687-a540-a343f63fe435
+  uid: 3b94fd81-2e86-4ab3-8212-a030aa1afb31
 rules:
 - apiGroups:
   - ""

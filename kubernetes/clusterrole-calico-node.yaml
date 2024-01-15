@@ -1,9 +1,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  creationTimestamp: "2024-01-11T12:06:16Z"
+  creationTimestamp: "2023-12-27T09:46:14Z"
   name: calico-node
-  uid: 4f67f4be-e169-43e2-940a-599ff2f16fd1
+  uid: 15b9bf4a-1f9b-4382-8db4-a11fff9fb8a4
 rules:
 - apiGroups:
   - ""

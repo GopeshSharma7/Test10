@@ -3,12 +3,12 @@ kind: RoleBinding
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
   name: system::extension-apiserver-authentication-reader
   namespace: kube-system
-  uid: 1d178059-7429-4a97-a7a1-06c0ee164392
+  uid: 403d6e24-9456-4724-abee-4f41da24324f
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role

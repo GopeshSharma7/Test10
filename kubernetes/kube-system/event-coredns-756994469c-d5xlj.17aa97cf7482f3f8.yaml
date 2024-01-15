@@ -1,0 +1,24 @@
+action: Binding
+apiVersion: v1
+eventTime: "2024-01-15T18:12:06.181911Z"
+firstTimestamp: null
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: coredns-756994469c-d5xlj
+  namespace: kube-system
+  resourceVersion: "2471228"
+  uid: 01eaa7b9-9806-4321-8173-3cd80a4e1f5c
+kind: Event
+lastTimestamp: null
+message: Successfully assigned kube-system/coredns-756994469c-d5xlj to sharmag-k8s-master-pnad30.englab.juniper.net
+metadata:
+  creationTimestamp: "2024-01-15T18:12:06Z"
+  name: coredns-756994469c-d5xlj.17aa97cf7482f3f8
+  namespace: kube-system
+  uid: 2f666f72-de94-4e28-aea2-c8977eadd968
+reason: Scheduled
+reportingComponent: default-scheduler
+reportingInstance: default-scheduler-sharmag-k8s-master-pnad30.englab.juniper.net
+source: {}
+type: Normal

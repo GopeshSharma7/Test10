@@ -5,12 +5,12 @@ metadata:
     deployment.kubernetes.io/revision: "1"
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
   name: contrail-k8s-deployer
   namespace: contrail-deploy
-  uid: c39f7561-6473-4df0-b469-0f63b273b479
+  uid: 9bf8c5e1-be50-41c6-b2dd-2cc68bfc500a
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -40,7 +40,7 @@ spec:
         - sh
         - -c
         - /manager --metrics-addr 127.0.0.1:8081 --headless-mode true
-        image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-k8s-deployer:master
+        image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-k8s-deployer:master
         imagePullPolicy: IfNotPresent
         name: contrail-k8s-deployer
         resources: {}
@@ -62,7 +62,7 @@ spec:
         - --force-conflicts
         - -k
         - /distributed-crd
-        image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-k8s-distributed-crdloader:master
+        image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-k8s-distributed-crdloader:master
         imagePullPolicy: IfNotPresent
         name: contrail-k8s-crdloader
         resources: {}
@@ -94,15 +94,15 @@ spec:
 status:
   availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2024-01-11T12:07:46Z"
-    lastUpdateTime: "2024-01-11T12:07:46Z"
+  - lastTransitionTime: "2023-12-27T09:47:54Z"
+    lastUpdateTime: "2023-12-27T09:47:54Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2024-01-11T12:07:38Z"
-    lastUpdateTime: "2024-01-11T12:07:46Z"
-    message: ReplicaSet "contrail-k8s-deployer-7f6f88bb47" has successfully progressed.
+  - lastTransitionTime: "2023-12-27T09:47:46Z"
+    lastUpdateTime: "2023-12-27T09:47:54Z"
+    message: ReplicaSet "contrail-k8s-deployer-67c445564f" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing

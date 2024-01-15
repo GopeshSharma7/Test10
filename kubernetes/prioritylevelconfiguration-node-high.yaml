@@ -3,9 +3,9 @@ kind: PriorityLevelConfiguration
 metadata:
   annotations:
     apf.kubernetes.io/autoupdate-spec: "true"
-  creationTimestamp: "2024-01-11T12:00:50Z"
+  creationTimestamp: "2023-12-27T09:42:46Z"
   name: node-high
-  uid: 0de09066-63b5-4bc2-ac22-af915aa1ce70
+  uid: ee0e2697-39c7-4705-88ed-e74e95b02f26
 spec:
   limited:
     assuredConcurrencyShares: 40

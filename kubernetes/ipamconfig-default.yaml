@@ -3,9 +3,9 @@ kind: IPAMConfig
 metadata:
   annotations:
     projectcalico.org/metadata: '{"creationTimestamp":null}'
-  creationTimestamp: "2024-01-11T12:06:31Z"
+  creationTimestamp: "2023-12-27T09:46:29Z"
   name: default
-  uid: a5f4426a-28a9-4cd7-ab16-b692606777cc
+  uid: d2425703-a20c-497f-bdfd-a59464942060
 spec:
   autoAllocateBlocks: true
   strictAffinity: false

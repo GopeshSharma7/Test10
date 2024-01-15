@@ -281,7 +281,7 @@ kind: ControllerRevision
 metadata:
   annotations:
     deprecated.daemonset.template.generation: "1"
-  creationTimestamp: "2024-01-11T12:06:16Z"
+  creationTimestamp: "2023-12-27T09:46:14Z"
   labels:
     controller-revision-hash: 79b8cdbc67
     k8s-app: calico-node
@@ -293,6 +293,6 @@ metadata:
     controller: true
     kind: DaemonSet
     name: calico-node
-    uid: 602a0cd6-285b-4aa4-a447-99be78940088
-  uid: 91972507-3a93-4784-9d0e-a4591f6e8a53
+    uid: c92f21a1-a56c-4fa9-8c5b-73a28beee9fe
+  uid: 8b6fbf26-1e1d-48ba-bb87-ef56db71310c
 revision: 1

@@ -1,9 +1,9 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  creationTimestamp: "2024-01-11T12:00:53Z"
+  creationTimestamp: "2023-12-27T09:42:49Z"
   name: system:coredns
-  uid: ff48ff53-12aa-42c7-ae16-3307a62a1a41
+  uid: 4c1b5e66-bbda-48eb-acc9-a42b2ea07302
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole

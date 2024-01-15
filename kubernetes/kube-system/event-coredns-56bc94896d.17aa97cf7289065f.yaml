@@ -1,0 +1,25 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-15T18:12:06Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: coredns-56bc94896d
+  namespace: kube-system
+  resourceVersion: "2471210"
+  uid: 4aa0961f-5ed2-4ecc-8f1f-be96674ee8fd
+kind: Event
+lastTimestamp: "2024-01-15T18:12:06Z"
+message: 'Deleted pod: coredns-56bc94896d-7txm9'
+metadata:
+  creationTimestamp: "2024-01-15T18:12:06Z"
+  name: coredns-56bc94896d.17aa97cf7289065f
+  namespace: kube-system
+  uid: 30f0738b-a36b-4379-91a2-3b6e53e2095a
+reason: SuccessfulDelete
+reportingComponent: replicaset-controller
+reportingInstance: ""
+source:
+  component: replicaset-controller
+type: Normal

@@ -3,11 +3,11 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   labels:
     kubernetes.io/bootstrapping: rbac-defaults
   name: system:controller:ttl-after-finished-controller
-  uid: b4463770-6a0c-48e9-91da-244befaec392
+  uid: 09fb1f17-0958-4127-bee7-ac28b0ed2b9d
 rules:
 - apiGroups:
   - batch

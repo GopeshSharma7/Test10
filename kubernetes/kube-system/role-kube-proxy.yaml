@@ -1,10 +1,10 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  creationTimestamp: "2024-01-11T12:00:53Z"
+  creationTimestamp: "2023-12-27T09:42:49Z"
   name: kube-proxy
   namespace: kube-system
-  uid: ccb462b8-fe3a-4bd2-a73d-f6e8588495ba
+  uid: a2403c28-fba7-49e3-9afb-429cba06b48c
 rules:
 - apiGroups:
   - ""

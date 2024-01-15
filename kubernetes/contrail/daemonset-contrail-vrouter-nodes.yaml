@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
   annotations:
     deprecated.daemonset.template.generation: "1"
-  creationTimestamp: "2024-01-11T12:07:46Z"
+  creationTimestamp: "2023-12-27T09:47:54Z"
   labels:
     app: contrail-vrouter-nodes
   name: contrail-vrouter-nodes
@@ -14,8 +14,8 @@ metadata:
     controller: true
     kind: Vrouter
     name: contrail-vrouter-nodes
-    uid: 29623289-2b2c-4dd4-b05a-e6c3e1ae1a49
-  uid: bfca8da7-1a70-4a2c-b9c5-0cc6a177815c
+    uid: 5db85b9a-f5d7-4621-a560-f635039c4f4a
+  uid: 0b222eeb-a6d9-407a-9b22-0c64311dd65c
 spec:
   revisionHistoryLimit: 10
   selector:
@@ -63,7 +63,7 @@ spec:
           value: dpdk
         - name: DATACONTROLINTERFACE
           value: enp3s0
-        image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-agent:master
+        image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-agent:master
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -133,7 +133,7 @@ spec:
         envFrom:
         - configMapRef:
             name: contrail-vrouter-nodes-env-configmap
-        image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-dpdk:master
+        image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-dpdk:master
         imagePullPolicy: IfNotPresent
         name: contrail-vrouter-agent-dpdk
         resources:
@@ -197,7 +197,7 @@ spec:
           value: contrail
         - name: INTROSPECT_SCHEME
           value: http
-        image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
+        image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
         imagePullPolicy: IfNotPresent
         name: contrail-vrouter-telemetry-exporter
         ports:
@@ -301,7 +301,7 @@ spec:
           value: contrail
         - name: DATACONTROLINTERFACE
           value: enp3s0
-        image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-init:master
+        image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-init:master
         imagePullPolicy: IfNotPresent
         name: contrail-init
         resources: {}
@@ -336,7 +336,7 @@ spec:
         envFrom:
         - configMapRef:
             name: contrail-vrouter-nodes-env-configmap
-        image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-kernel-init-dpdk:master
+        image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-kernel-init-dpdk:master
         imagePullPolicy: IfNotPresent
         name: contrail-vrouter-kernel-init-dpdk
         resources: {}
