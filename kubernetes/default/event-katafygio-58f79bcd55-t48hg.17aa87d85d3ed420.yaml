@@ -1,8 +1,20 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-15T13:19:32Z"
+deprecatedLastTimestamp: "2024-01-15T13:19:32Z"
+deprecatedSource:
+  component: kubelet
+  host: trohit-k8s-master-1k3tt0.englab.juniper.net
 eventTime: null
-firstTimestamp: "2024-01-15T13:19:32Z"
-involvedObject:
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-15T13:19:32Z"
+  name: katafygio-58f79bcd55-t48hg.17aa87d85d3ed420
+  namespace: default
+  uid: 45f1ea07-1704-43bf-af4a-0e2a97429d63
+note: Pulling image "svl-artifactory.juniper.net/atom-docker/cn2/sharmag07/katafygio:h2"
+reason: Pulling
+regarding:
   apiVersion: v1
   fieldPath: spec.containers{katafygio}
   kind: Pod
@@ -10,18 +22,6 @@ involvedObject:
   namespace: default
   resourceVersion: "516125"
   uid: 8b049811-c8c3-400b-b61d-803d4738113d
-kind: Event
-lastTimestamp: "2024-01-15T13:19:32Z"
-message: Pulling image "svl-artifactory.juniper.net/atom-docker/cn2/sharmag07/katafygio:h2"
-metadata:
-  creationTimestamp: "2024-01-15T13:19:32Z"
-  name: katafygio-58f79bcd55-t48hg.17aa87d85d3ed420
-  namespace: default
-  uid: 45f1ea07-1704-43bf-af4a-0e2a97429d63
-reason: Pulling
-reportingComponent: kubelet
+reportingController: kubelet
 reportingInstance: trohit-k8s-master-1k3tt0.englab.juniper.net
-source:
-  component: kubelet
-  host: trohit-k8s-master-1k3tt0.englab.juniper.net
 type: Normal
