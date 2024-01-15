@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-12T10:12:46Z"
+  creationTimestamp: "2024-01-11T12:01:07Z"
+  labels:
+    k8s-app: kube-dns
+    kubernetes.io/cluster-service: "true"
+    kubernetes.io/name: CoreDNS
+  name: kube-dns
+  namespace: kube-system
+  uid: dfc37eba-0fcc-434b-bbe0-930a506d5a3e
+subsets:
+- addresses:
+  - ip: 10.244.26.69
+    nodeName: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+    targetRef:
+      kind: Pod
+      name: coredns-756994469c-zgtbh
+      namespace: kube-system
+      uid: 36e940bb-bc95-4415-9d51-2267aeff396c
+  - ip: 10.244.47.4
+    nodeName: trohit-k8s-master-1k3tt0.englab.juniper.net
+    targetRef:
+      kind: Pod
+      name: coredns-756994469c-6d2mg
+      namespace: kube-system
+      uid: 46aabcc3-dd74-4512-a4cd-06a9f2e6cce4
+  ports:
+  - name: dns-tcp
+    port: 53
+    protocol: TCP
+  - name: dns
+    port: 53
+    protocol: UDP
+  - name: metrics
+    port: 9153
+    protocol: TCP

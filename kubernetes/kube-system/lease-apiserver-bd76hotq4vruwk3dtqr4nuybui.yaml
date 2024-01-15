@@ -1,0 +1,14 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2024-01-11T12:00:50Z"
+  labels:
+    apiserver.kubernetes.io/identity: kube-apiserver
+    kubernetes.io/hostname: trohit-k8s-master-1k3tt0.englab.juniper.net
+  name: apiserver-bd76hotq4vruwk3dtqr4nuybui
+  namespace: kube-system
+  uid: 4afa5f5d-7cc1-4020-aca6-aefdb655a796
+spec:
+  holderIdentity: apiserver-bd76hotq4vruwk3dtqr4nuybui_3682b9a4-a180-43e6-8901-93a1b573988c
+  leaseDurationSeconds: 3600
+  renewTime: "2024-01-15T13:20:19.120529Z"

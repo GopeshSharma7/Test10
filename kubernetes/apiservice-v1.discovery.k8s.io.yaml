@@ -1,0 +1,20 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2024-01-11T12:00:50Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: onstart
+  name: v1.discovery.k8s.io
+  uid: 578125d6-5cb9-4f53-bc2b-ff4e94e54c05
+spec:
+  group: discovery.k8s.io
+  groupPriorityMinimum: 16200
+  version: v1
+  versionPriority: 15
+status:
+  conditions:
+  - lastTransitionTime: "2024-01-11T12:00:50Z"
+    message: Local APIServices are always available
+    reason: Local
+    status: "True"
+    type: Available

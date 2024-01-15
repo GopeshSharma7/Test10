@@ -1,0 +1,41 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.47.7
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: trohit-k8s-master-1k3tt0.englab.juniper.net
+  targetRef:
+    kind: Pod
+    name: example-webhook-66f6b79986-4b878
+    namespace: default
+    uid: 14ff3a74-0122-49e4-a7b7-76e9abb4d32f
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-15T11:10:02Z"
+  creationTimestamp: "2024-01-15T11:09:59Z"
+  generateName: example-webhook-
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: example-webhook
+  name: example-webhook-8p5c5
+  namespace: default
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: example-webhook
+    uid: f2958ec6-21c7-4d99-a8e6-21582ce9197e
+  uid: e2d224a2-9b6a-4e4c-8c97-fd4bed11e7fe
+ports:
+- name: metrics
+  port: 80
+  protocol: TCP
+- name: application
+  port: 8443
+  protocol: TCP

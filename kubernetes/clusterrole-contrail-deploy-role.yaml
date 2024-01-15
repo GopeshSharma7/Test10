@@ -1,0 +1,18 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    meta.helm.sh/release-name: jcnr
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2024-01-11T12:07:38Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: contrail-deploy-role
+  uid: 3bd97944-1cf8-4f3b-ae03-363f18aa2c29
+rules:
+- apiGroups:
+  - '*'
+  resources:
+  - '*'
+  verbs:
+  - '*'

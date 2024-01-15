@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    meta.helm.sh/release-name: jcnr
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2024-01-11T12:07:38Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    kubernetes.io/metadata.name: contrail-deploy
+  name: contrail-deploy
+  uid: 7be9919d-9af1-4e38-b771-cbfb8498a0e8
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

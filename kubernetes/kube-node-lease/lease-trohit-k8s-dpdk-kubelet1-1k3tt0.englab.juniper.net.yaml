@@ -1,0 +1,16 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2024-01-11T12:06:05Z"
+  name: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+  namespace: kube-node-lease
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+    uid: d48c65d3-c988-4993-9311-d53201535f9a
+  uid: 46174feb-b1a0-4445-8f9e-5f5c9e5d20d5
+spec:
+  holderIdentity: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+  leaseDurationSeconds: 40
+  renewTime: "2024-01-15T13:20:11.302705Z"

@@ -1,0 +1,13 @@
+apiVersion: crd.projectcalico.org/v1
+kind: IPAMHandle
+metadata:
+  annotations:
+    projectcalico.org/metadata: '{"creationTimestamp":null}'
+  creationTimestamp: "2024-01-11T12:06:31Z"
+  name: ipip-tunnel-addr-trohit-k8s-master-1k3tt0.englab.juniper.net
+  uid: 44edaf78-9f43-480d-949f-80073e12cac6
+spec:
+  block:
+    10.244.47.0/26: 1
+  deleted: false
+  handleID: ipip-tunnel-addr-trohit-k8s-master-1k3tt0.englab.juniper.net

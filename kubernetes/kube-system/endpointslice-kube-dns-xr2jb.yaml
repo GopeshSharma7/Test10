@@ -1,0 +1,57 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.47.4
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: trohit-k8s-master-1k3tt0.englab.juniper.net
+  targetRef:
+    kind: Pod
+    name: coredns-756994469c-6d2mg
+    namespace: kube-system
+    uid: 46aabcc3-dd74-4512-a4cd-06a9f2e6cce4
+- addresses:
+  - 10.244.26.69
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+  targetRef:
+    kind: Pod
+    name: coredns-756994469c-zgtbh
+    namespace: kube-system
+    uid: 36e940bb-bc95-4415-9d51-2267aeff396c
+kind: EndpointSlice
+metadata:
+  creationTimestamp: "2024-01-11T12:01:07Z"
+  generateName: kube-dns-
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    k8s-app: kube-dns
+    kubernetes.io/cluster-service: "true"
+    kubernetes.io/name: CoreDNS
+    kubernetes.io/service-name: kube-dns
+  name: kube-dns-xr2jb
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: kube-dns
+    uid: 3564820b-bc98-49f3-ab84-b9bfed3e6dcc
+  uid: 2a1c1219-85cb-4c5a-99a9-1e7a6c19c73d
+ports:
+- name: metrics
+  port: 9153
+  protocol: TCP
+- name: dns
+  port: 53
+  protocol: UDP
+- name: dns-tcp
+  port: 53
+  protocol: TCP

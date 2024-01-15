@@ -1,0 +1,20 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2024-01-11T12:07:44Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: "true"
+  name: v1.dataplane.juniper.net
+  uid: 3995611f-f2e4-4408-bb5e-5be5617c68d2
+spec:
+  group: dataplane.juniper.net
+  groupPriorityMinimum: 1000
+  version: v1
+  versionPriority: 100
+status:
+  conditions:
+  - lastTransitionTime: "2024-01-11T12:07:44Z"
+    message: Local APIServices are always available
+    reason: Local
+    status: "True"
+    type: Available

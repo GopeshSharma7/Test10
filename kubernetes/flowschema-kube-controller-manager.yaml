@@ -1,0 +1,42 @@
+apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
+kind: FlowSchema
+metadata:
+  annotations:
+    apf.kubernetes.io/autoupdate-spec: "true"
+  creationTimestamp: "2024-01-11T12:00:50Z"
+  name: kube-controller-manager
+  uid: 2cc37691-65e1-4fed-8970-58e1653de358
+spec:
+  distinguisherMethod:
+    type: ByNamespace
+  matchingPrecedence: 800
+  priorityLevelConfiguration:
+    name: workload-high
+  rules:
+  - nonResourceRules:
+    - nonResourceURLs:
+      - '*'
+      verbs:
+      - '*'
+    resourceRules:
+    - apiGroups:
+      - '*'
+      clusterScope: true
+      namespaces:
+      - '*'
+      resources:
+      - '*'
+      verbs:
+      - '*'
+    subjects:
+    - kind: User
+      user:
+        name: system:kube-controller-manager
+status:
+  conditions:
+  - lastTransitionTime: "2024-01-11T12:00:50Z"
+    message: This FlowSchema references the PriorityLevelConfiguration object named
+      "workload-high" and it exists
+    reason: Found
+    status: "False"
+    type: Dangling

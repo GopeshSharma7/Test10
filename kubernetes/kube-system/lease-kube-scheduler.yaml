@@ -1,0 +1,13 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2024-01-11T12:00:54Z"
+  name: kube-scheduler
+  namespace: kube-system
+  uid: 56f0fca0-de91-4a37-bd02-c0f481114364
+spec:
+  acquireTime: "2024-01-11T12:00:54.460808Z"
+  holderIdentity: trohit-k8s-master-1k3tt0.englab.juniper.net_81ea1990-1fcc-4d38-bde7-8860e0bf6c01
+  leaseDurationSeconds: 15
+  leaseTransitions: 0
+  renewTime: "2024-01-15T13:20:19.684534Z"

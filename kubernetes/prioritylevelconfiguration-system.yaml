@@ -1,0 +1,20 @@
+apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
+kind: PriorityLevelConfiguration
+metadata:
+  annotations:
+    apf.kubernetes.io/autoupdate-spec: "true"
+  creationTimestamp: "2024-01-11T12:00:50Z"
+  name: system
+  uid: 87070a2f-2b61-475a-ade8-098fe03fe524
+spec:
+  limited:
+    assuredConcurrencyShares: 30
+    lendablePercent: 33
+    limitResponse:
+      queuing:
+        handSize: 6
+        queueLengthLimit: 50
+        queues: 64
+      type: Queue
+  type: Limited
+status: {}

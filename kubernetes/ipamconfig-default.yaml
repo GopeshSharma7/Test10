@@ -1,0 +1,11 @@
+apiVersion: crd.projectcalico.org/v1
+kind: IPAMConfig
+metadata:
+  annotations:
+    projectcalico.org/metadata: '{"creationTimestamp":null}'
+  creationTimestamp: "2024-01-11T12:06:31Z"
+  name: default
+  uid: a5f4426a-28a9-4cd7-ab16-b692606777cc
+spec:
+  autoAllocateBlocks: true
+  strictAffinity: false

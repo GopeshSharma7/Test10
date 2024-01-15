@@ -1,0 +1,18 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    helm.sh/hook: pre-install
+    helm.sh/hook-weight: "10"
+  creationTimestamp: "2024-01-11T12:07:38Z"
+  labels:
+    jcnr: "true"
+  name: ops-role
+  uid: 2bd8efaf-20bf-4043-828a-091ade6f75d5
+rules:
+- apiGroups:
+  - '*'
+  resources:
+  - '*'
+  verbs:
+  - '*'
