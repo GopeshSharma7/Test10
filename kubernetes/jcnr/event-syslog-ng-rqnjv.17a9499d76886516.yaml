@@ -1,27 +1,27 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 4659
-deprecatedFirstTimestamp: "2024-01-11T12:07:54Z"
-deprecatedLastTimestamp: "2024-01-15T13:23:52Z"
-deprecatedSource:
-  component: kubelet
-  host: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+apiVersion: v1
+count: 4663
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2024-01-11T12:07:54Z"
-  name: syslog-ng-rqnjv.17a9499d76886516
-  namespace: jcnr
-  uid: 3d924694-fb51-4c75-8e41-bce728e4d784
-note: 'Nameserver limits were exceeded, some nameservers have been omitted, the applied
-  nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
-reason: DNSConfigForming
-regarding:
+firstTimestamp: "2024-01-11T12:07:54Z"
+involvedObject:
   apiVersion: v1
   kind: Pod
   name: syslog-ng-rqnjv
   namespace: jcnr
   resourceVersion: "1349"
   uid: d5e2cb9f-e269-46e0-8872-12a2773b2a4b
-reportingController: kubelet
+kind: Event
+lastTimestamp: "2024-01-15T13:28:35Z"
+message: 'Nameserver limits were exceeded, some nameservers have been omitted, the
+  applied nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
+metadata:
+  creationTimestamp: "2024-01-11T12:07:54Z"
+  name: syslog-ng-rqnjv.17a9499d76886516
+  namespace: jcnr
+  uid: 3d924694-fb51-4c75-8e41-bce728e4d784
+reason: DNSConfigForming
+reportingComponent: kubelet
 reportingInstance: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+source:
+  component: kubelet
+  host: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
 type: Warning
