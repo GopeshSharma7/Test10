@@ -3,7 +3,7 @@ data:
   127.0.0.1: "5269"
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-01-11T12:07:46Z"
+  creationTimestamp: "2023-12-27T09:47:54Z"
   name: dynamic-config-configmap
   namespace: contrail
-  uid: 6ef83f7e-6df2-49ae-92cd-8efd502722ce
+  uid: b4124d4a-9324-4445-93f4-99fe93b820cf

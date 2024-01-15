@@ -33,10 +33,10 @@ data:
     }
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-01-11T12:06:57Z"
+  creationTimestamp: "2023-12-27T09:47:05Z"
   labels:
     app: multus
     tier: node
   name: multus-cni-config
   namespace: kube-system
-  uid: a4c40330-dcd4-4a79-858f-4fb9466fa161
+  uid: 6b9aad51-713f-410a-9bfe-8ca43e33f88d

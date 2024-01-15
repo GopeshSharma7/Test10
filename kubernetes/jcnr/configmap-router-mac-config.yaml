@@ -1,15 +1,15 @@
 apiVersion: v1
 data:
-  trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net: 48:5A:0D:62:9B:97
-  trohit-k8s-master-1k3tt0.englab.juniper.net: 48:5A:0D:11:B0:7E
+  sharmag-k8s-dpdk-kubelet1-pnad30.englab.juniper.net: 48:5A:0D:BA:4E:BB
+  sharmag-k8s-master-pnad30.englab.juniper.net: 48:5A:0D:BA:25:CA
 kind: ConfigMap
 metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
   name: router-mac-config
   namespace: jcnr
-  uid: c80c1d10-4c70-4fd4-ba27-0fc21fd82026
+  uid: 3fe0da22-68e7-4dc6-abc3-31daa637eac2

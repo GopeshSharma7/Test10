@@ -1,9 +1,9 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  creationTimestamp: "2024-01-11T12:06:13Z"
+  creationTimestamp: "2023-12-27T09:46:11Z"
   name: felixconfigurations.crd.projectcalico.org
-  uid: 33094ab9-682f-43cf-b9b6-f6ad19f3e022
+  uid: 813d9044-5f87-400d-8e43-a925685d5ffc
 spec:
   conversion:
     strategy: None
@@ -728,12 +728,12 @@ status:
     plural: felixconfigurations
     singular: felixconfiguration
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:13Z"
+  - lastTransitionTime: "2023-12-27T09:46:11Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:06:13Z"
+  - lastTransitionTime: "2023-12-27T09:46:11Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

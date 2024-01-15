@@ -3,9 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
-  creationTimestamp: "2024-01-11T12:07:44Z"
+  creationTimestamp: "2023-12-27T09:47:51Z"
   name: vrouters.dataplane.juniper.net
-  uid: e5e65e7c-85a9-4d4d-a296-9c35ea8e8457
+  uid: 826843d2-f4fc-4be5-a5b7-3753a3c7e427
 spec:
   conversion:
     strategy: Webhook
@@ -1111,8 +1111,6 @@ spec:
                     mode:
                       type: integer
                     name:
-                      type: string
-                    primaryInterface:
                       type: string
                     slaveInterfaces:
                       items:
@@ -6387,14 +6385,6 @@ spec:
                   l2TableSize:
                     description: Vrouter L2 Table Size
                     type: string
-                  monitoringConfig:
-                    description: 'DPDK: Monitoring/logging thread configuration'
-                    properties:
-                      loggingInterval:
-                        type: integer
-                      loggingMask:
-                        type: integer
-                    type: object
                   mtu:
                     description: 'DPDK: MTU'
                     type: integer
@@ -16277,12 +16267,12 @@ status:
     plural: vrouters
     singular: vrouter
   conditions:
-  - lastTransitionTime: "2024-01-11T12:07:44Z"
+  - lastTransitionTime: "2023-12-27T09:47:51Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:07:44Z"
+  - lastTransitionTime: "2023-12-27T09:47:51Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

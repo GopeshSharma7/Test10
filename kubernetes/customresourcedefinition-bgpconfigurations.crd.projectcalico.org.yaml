@@ -1,9 +1,9 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  creationTimestamp: "2024-01-11T12:06:13Z"
+  creationTimestamp: "2023-12-27T09:46:11Z"
   name: bgpconfigurations.crd.projectcalico.org
-  uid: 97ecdab6-5d1d-401b-81c4-2da42f442aa0
+  uid: b83c5649-a83e-4758-8caf-fbb6d1d02178
 spec:
   conversion:
     strategy: None
@@ -181,12 +181,12 @@ status:
     plural: bgpconfigurations
     singular: bgpconfiguration
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:13Z"
+  - lastTransitionTime: "2023-12-27T09:46:11Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:06:13Z"
+  - lastTransitionTime: "2023-12-27T09:46:11Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

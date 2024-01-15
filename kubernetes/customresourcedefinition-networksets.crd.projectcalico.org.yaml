@@ -1,9 +1,9 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  creationTimestamp: "2024-01-11T12:06:15Z"
+  creationTimestamp: "2023-12-27T09:46:13Z"
   name: networksets.crd.projectcalico.org
-  uid: 112d1682-6ece-406e-a68b-072a1ba79593
+  uid: fc359504-a2b6-4c0d-97ba-104936d53354
 spec:
   conversion:
     strategy: None
@@ -52,12 +52,12 @@ status:
     plural: networksets
     singular: networkset
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:15Z"
+  - lastTransitionTime: "2023-12-27T09:46:13Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:06:15Z"
+  - lastTransitionTime: "2023-12-27T09:46:13Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

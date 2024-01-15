@@ -2,17 +2,15 @@ apiVersion: dataplane.juniper.net/v1alpha1
 kind: Vrouter
 metadata:
   annotations:
-    conversion.spec.BondInterfaceConfigs: "null"
     conversion.spec.agent.default.fabricRpfCheckDisable: "true"
-    conversion.spec.dpdk.monitoringConfig: '{}'
     conversion.spec.dpdk.smartnicConfig: '{}'
     conversion.spec.terminationGracePeriodSeconds: "60"
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"dataplane.juniper.net/v1","kind":"Vrouter","metadata":{"annotations":{},"name":"contrail-vrouter-nodes","namespace":"contrail"},"spec":{"agent":{"default":{"fabricRpfCheckDisable":true,"logLevel":"SYS_INFO","xmppAuthEnable":false},"sandesh":{"introspectSslEnable":false,"sandeshSslEnable":false}},"agentModeType":"dpdk","common":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"node-role.kubernetes.io/control-plane","operator":"DoesNotExist"}]}]}}},"containers":[{"image":"10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-agent:master","imagePullPolicy":"IfNotPresent","livenessProbe":{"failureThreshold":3,"httpGet":{"host":"127.0.0.1","path":"/vrouter-health-check","port":9091},"initialDelaySeconds":10,"periodSeconds":20,"successThreshold":1,"timeoutSeconds":5},"name":"contrail-vrouter-agent","startupProbe":{"failureThreshold":3,"httpGet":{"host":"127.0.0.1","path":"/vrouter-health-check","port":9091},"initialDelaySeconds":10,"periodSeconds":20,"successThreshold":1,"timeoutSeconds":5}},{"image":"10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-dpdk:master","imagePullPolicy":"IfNotPresent","name":"contrail-vrouter-agent-dpdk","resources":{"limits":{"hugepages-1Gi":"6Gi","memory":"6Gi"},"requests":{"hugepages-1Gi":"6Gi","memory":"6Gi"}}},{"env":[{"name":"TELEMETRY_EXPORTER_SCHEME","value":"http"},{"name":"INTROSPECT_SCHEME","value":"http"}],"image":"10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master","imagePullPolicy":"IfNotPresent","name":"contrail-vrouter-telemetry-exporter"}],"initContainers":[{"args":["sysctl -w net.ipv6.conf.default.addr_gen_mode=0 \u0026\u0026 sysctl -w net.ipv6.conf.all.addr_gen_mode=0 \u0026\u0026 sysctl -w net.ipv6.conf.default.autoconf=0 \u0026\u0026 sysctl -w net.ipv6.conf.all.autoconf=0 \u0026\u0026 echo -e \"\\nSuccessfully loaded kernel parameter using sysctl cli\\n\" || echo -e \"\\nError in loading kernel parameter using sysctl cli\\n\"; modprobe tun \u0026\u0026 modprobe ipip \u0026\u0026 modprobe ip_tunnel \u0026\u0026 modprobe ip6_tunnel \u0026\u0026 modprobe mpls_gso \u0026\u0026 modprobe mpls_router \u0026\u0026 modprobe mpls_iptunnel \u0026\u0026 modprobe vrf \u0026\u0026 modprobe vxlan \u0026\u0026 modprobe fou \u0026\u0026 modprobe fou6 \u0026\u0026 echo -e \"\\nSuccessfully loaded kernel modules\\n\"|| echo -e \"\\nError in loadinfg kernel modules. Check whether kernel modules packages are installed or not.\\nIf running OS is Ubuntu, Run following command and reboot  to enable kernel modules.\\nsudo apt install linux-generic -y \\n sudo apt install --reinstall linux-image-$(uname -r) -y; \\n sudo apt install --reinstall linux-modules-$(uname -r) -y;\\n sudo apt install --reinstall linux-modules-extra-$(uname -r) -y; \\n\" ; set -o pipefail \u0026\u0026 python3 -u crpdconfig_generator/crpdconfig_generator.py evpn | tee -a \"/var/log/contrail/cleanup.log\" ;"],"command":["/bin/sh","-c"],"env":[{"name":"NODE_NAME","valueFrom":{"fieldRef":{"fieldPath":"spec.nodeName"}}},{"name":"PYTHONUNBUFFERED","value":"1"}],"image":"svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpdconfig-generator:v21","name":"jcnr-evpn-conf","securityContext":{"capabilities":{"add":["SYS_MODULE","NET_ADMIN","SYS_PTRACE"]},"privileged":true,"runAsUser":0},"volumeMounts":[{"mountPath":"/etc/podinfo","name":"podinfo"},{"mountPath":"/var/lib/contrail","name":"var-lib-contrail"},{"mountPath":"/var/run","name":"var-run"},{"mountPath":"/var/run/contrail","name":"var-run-contrail"},{"mountPath":"/etc/contrail","name":"config-volume"},{"mountPath":"/var/crash","name":"var-crashes"},{"mountPath":"/var/log/contrail","name":"var-log-contrail"},{"mountPath":"/lib/modules","name":"lib-modules"}]},{"image":"10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-init:master","imagePullPolicy":"IfNotPresent","name":"contrail-init"},{"image":"10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-kernel-init-dpdk:master","imagePullPolicy":"IfNotPresent","name":"contrail-vrouter-kernel-init-dpdk"}]},"coreFilePath":"/var/crash","corePattern":"","dpdk":{"cpuCoreMask":"2,3","dpdkCommandAdditionalArgs":"--yield_option 0","dpdkCtrlThreadMask":"","dpdkUioDriver":"vfio-pci","hugePages":null,"hugePagesDir":"/dev/hugepages","l2TableAgeout":60,"l2TableSize":"10240","mtu":9000,"serviceCoreMask":""},"headlessMode":true,"installCni":false,"interfaceLayer":"l3","interfaces":[{"ddp":"auto","level":"l3","name":"enp3s0","type":"fabric"}],"logPath":"/var/log/jcnr/","qosEnable":false,"restoreInterfaces":false,"stormControlProfiles":{"rate_limit_pf1":{"bandwidth":{"level":0}}}}}
-  creationTimestamp: "2024-01-11T12:07:46Z"
+      {"apiVersion":"dataplane.juniper.net/v1","kind":"Vrouter","metadata":{"annotations":{},"name":"contrail-vrouter-nodes","namespace":"contrail"},"spec":{"agent":{"default":{"fabricRpfCheckDisable":true,"logLevel":"SYS_INFO","xmppAuthEnable":false},"sandesh":{"introspectSslEnable":false,"sandeshSslEnable":false}},"agentModeType":"dpdk","common":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"node-role.kubernetes.io/control-plane","operator":"DoesNotExist"}]}]}}},"containers":[{"image":"10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-agent:master","imagePullPolicy":"IfNotPresent","livenessProbe":{"failureThreshold":3,"httpGet":{"host":"127.0.0.1","path":"/vrouter-health-check","port":9091},"initialDelaySeconds":10,"periodSeconds":20,"successThreshold":1,"timeoutSeconds":5},"name":"contrail-vrouter-agent","startupProbe":{"failureThreshold":3,"httpGet":{"host":"127.0.0.1","path":"/vrouter-health-check","port":9091},"initialDelaySeconds":10,"periodSeconds":20,"successThreshold":1,"timeoutSeconds":5}},{"image":"10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-dpdk:master","imagePullPolicy":"IfNotPresent","name":"contrail-vrouter-agent-dpdk","resources":{"limits":{"hugepages-1Gi":"6Gi","memory":"6Gi"},"requests":{"hugepages-1Gi":"6Gi","memory":"6Gi"}}},{"env":[{"name":"TELEMETRY_EXPORTER_SCHEME","value":"http"},{"name":"INTROSPECT_SCHEME","value":"http"}],"image":"10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master","imagePullPolicy":"IfNotPresent","name":"contrail-vrouter-telemetry-exporter"}],"initContainers":[{"args":["sysctl -w net.ipv6.conf.default.addr_gen_mode=0 \u0026\u0026 sysctl -w net.ipv6.conf.all.addr_gen_mode=0 \u0026\u0026 sysctl -w net.ipv6.conf.default.autoconf=0 \u0026\u0026 sysctl -w net.ipv6.conf.all.autoconf=0 \u0026\u0026 echo -e \"\\nSuccessfully loaded kernel parameter using sysctl cli\\n\" || echo -e \"\\nError in loading kernel parameter using sysctl cli\\n\"; modprobe tun \u0026\u0026 modprobe ipip \u0026\u0026 modprobe ip_tunnel \u0026\u0026 modprobe ip6_tunnel \u0026\u0026 modprobe mpls_gso \u0026\u0026 modprobe mpls_router \u0026\u0026 modprobe mpls_iptunnel \u0026\u0026 modprobe vrf \u0026\u0026 modprobe vxlan \u0026\u0026 modprobe fou \u0026\u0026 modprobe fou6 \u0026\u0026 echo -e \"\\nSuccessfully loaded kernel modules\\n\"|| echo -e \"\\nError in loadinfg kernel modules. Check whether kernel modules packages are installed or not.\\nIf running OS is Ubuntu, Run following command and reboot  to enable kernel modules.\\nsudo apt install linux-generic -y \\n sudo apt install --reinstall linux-image-$(uname -r) -y; \\n sudo apt install --reinstall linux-modules-$(uname -r) -y;\\n sudo apt install --reinstall linux-modules-extra-$(uname -r) -y; \\n\" ; set -o pipefail \u0026\u0026 python3 -u crpdconfig_generator/crpdconfig_generator.py evpn | tee -a \"/var/log/contrail/cleanup.log\" ;"],"command":["/bin/sh","-c"],"env":[{"name":"NODE_NAME","valueFrom":{"fieldRef":{"fieldPath":"spec.nodeName"}}},{"name":"PYTHONUNBUFFERED","value":"1"}],"image":"svl-artifactory.juniper.net/junos-docker-local/warthog/amd64/crpdconfig-generator:v21","name":"jcnr-evpn-conf","securityContext":{"capabilities":{"add":["SYS_MODULE","NET_ADMIN","SYS_PTRACE"]},"privileged":true,"runAsUser":0},"volumeMounts":[{"mountPath":"/etc/podinfo","name":"podinfo"},{"mountPath":"/var/lib/contrail","name":"var-lib-contrail"},{"mountPath":"/var/run","name":"var-run"},{"mountPath":"/var/run/contrail","name":"var-run-contrail"},{"mountPath":"/etc/contrail","name":"config-volume"},{"mountPath":"/var/crash","name":"var-crashes"},{"mountPath":"/var/log/contrail","name":"var-log-contrail"},{"mountPath":"/lib/modules","name":"lib-modules"}]},{"image":"10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-init:master","imagePullPolicy":"IfNotPresent","name":"contrail-init"},{"image":"10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-kernel-init-dpdk:master","imagePullPolicy":"IfNotPresent","name":"contrail-vrouter-kernel-init-dpdk"}]},"coreFilePath":"/var/crash","corePattern":"","dpdk":{"cpuCoreMask":"2,3","dpdkCommandAdditionalArgs":"--yield_option 0","dpdkCtrlThreadMask":"","dpdkUioDriver":"vfio-pci","hugePages":null,"hugePagesDir":"/dev/hugepages","l2TableAgeout":60,"l2TableSize":"10240","mtu":9000,"serviceCoreMask":""},"headlessMode":true,"installCni":false,"interfaceLayer":"l3","interfaces":[{"ddp":"auto","level":"l3","name":"enp3s0","type":"fabric"}],"logPath":"/var/log/jcnr/","qosEnable":false,"restoreInterfaces":false,"stormControlProfiles":{"rate_limit_pf1":{"bandwidth":{"level":0}}}}}
+  creationTimestamp: "2023-12-27T09:47:54Z"
   name: contrail-vrouter-nodes
   namespace: contrail
-  uid: 29623289-2b2c-4dd4-b05a-e6c3e1ae1a49
+  uid: 5db85b9a-f5d7-4621-a560-f635039c4f4a
 spec:
   agent:
     agentTestFramework: {}
@@ -73,7 +71,7 @@ spec:
             - key: node-role.kubernetes.io/control-plane
               operator: DoesNotExist
     containers:
-    - image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-agent:master
+    - image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-agent:master
       imagePullPolicy: IfNotPresent
       livenessProbe:
         failureThreshold: 3
@@ -97,7 +95,7 @@ spec:
         periodSeconds: 20
         successThreshold: 1
         timeoutSeconds: 5
-    - image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-dpdk:master
+    - image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-dpdk:master
       imagePullPolicy: IfNotPresent
       name: contrail-vrouter-agent-dpdk
       resources:
@@ -112,7 +110,7 @@ spec:
         value: http
       - name: INTROSPECT_SCHEME
         value: http
-      image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
+      image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
       imagePullPolicy: IfNotPresent
       name: contrail-vrouter-telemetry-exporter
       resources: {}
@@ -171,11 +169,11 @@ spec:
         name: var-log-contrail
       - mountPath: /lib/modules
         name: lib-modules
-    - image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-init:master
+    - image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-init:master
       imagePullPolicy: IfNotPresent
       name: contrail-init
       resources: {}
-    - image: 10.108.30.13:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-kernel-init-dpdk:master
+    - image: 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-vrouter-kernel-init-dpdk:master
       imagePullPolicy: IfNotPresent
       name: contrail-vrouter-kernel-init-dpdk
       resources: {}
@@ -210,36 +208,36 @@ spec:
   vCommon: {}
 status:
   conditions:
-  - lastTransitionTime: "2024-01-11T12:08:27Z"
-    lastUpdateTime: "2024-01-11T12:08:27Z"
+  - lastTransitionTime: "2023-12-27T09:48:35Z"
+    lastUpdateTime: "2023-12-27T09:48:35Z"
     name: contrail/contrail-vrouter-nodes-configmap
     operation: Create
     reason: ServiceReady
     status: "True"
     type: ConfigMap
-  - lastTransitionTime: "2024-01-11T12:08:27Z"
-    lastUpdateTime: "2024-01-11T12:08:27Z"
+  - lastTransitionTime: "2023-12-27T09:48:35Z"
+    lastUpdateTime: "2023-12-27T09:48:35Z"
     name: contrail/contrail-vrouter-nodes
     operation: Create
     reason: ServiceReady
     status: "True"
     type: DaemonSet
-  - lastTransitionTime: "2024-01-11T12:08:27Z"
-    lastUpdateTime: "2024-01-11T12:08:27Z"
+  - lastTransitionTime: "2023-12-27T09:48:35Z"
+    lastUpdateTime: "2023-12-27T09:48:35Z"
     name: contrail/contrail-vrouter-nodes
     operation: StatusCheck
     reason: ServiceReady
     status: "True"
     type: DaemonSetStatus
-  - lastTransitionTime: "2024-01-11T12:08:27Z"
-    lastUpdateTime: "2024-01-11T12:08:27Z"
+  - lastTransitionTime: "2023-12-27T09:48:35Z"
+    lastUpdateTime: "2023-12-27T09:48:35Z"
     name: contrail/contrail-vrouter-nodes
     operation: Update
     reason: ServiceReady
     status: "True"
     type: Done
   controlDataAddress:
-    trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net: 192.168.2.3
+    sharmag-k8s-dpdk-kubelet1-pnad30.englab.juniper.net: 192.168.2.3
   metadata: {}
   phase: Done
   status: "True"

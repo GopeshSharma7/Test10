@@ -3,9 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: (devel)
-  creationTimestamp: "2024-01-11T12:06:13Z"
+  creationTimestamp: "2023-12-27T09:46:11Z"
   name: caliconodestatuses.crd.projectcalico.org
-  uid: fd22bc85-222d-407d-acfd-5730f2c2eb8a
+  uid: 4efc9b43-c3f3-4df4-84ac-84394bc424a9
 spec:
   conversion:
     strategy: None
@@ -263,12 +263,12 @@ status:
     plural: caliconodestatuses
     singular: caliconodestatus
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:13Z"
+  - lastTransitionTime: "2023-12-27T09:46:11Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:06:13Z"
+  - lastTransitionTime: "2023-12-27T09:46:11Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

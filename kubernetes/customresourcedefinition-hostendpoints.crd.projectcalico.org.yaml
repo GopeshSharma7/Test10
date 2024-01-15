@@ -1,9 +1,9 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  creationTimestamp: "2024-01-11T12:06:14Z"
+  creationTimestamp: "2023-12-27T09:46:12Z"
   name: hostendpoints.crd.projectcalico.org
-  uid: 14cf04cc-24ed-4e74-abe8-4e2d27cda073
+  uid: 13f29d65-11e5-4d4c-a441-6ce166d476e7
 spec:
   conversion:
     strategy: None
@@ -109,12 +109,12 @@ status:
     plural: hostendpoints
     singular: hostendpoint
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:14Z"
+  - lastTransitionTime: "2023-12-27T09:46:12Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:06:14Z"
+  - lastTransitionTime: "2023-12-27T09:46:12Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

@@ -4,12 +4,12 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
     kubernetes.io/metadata.name: contrail-deploy
   name: contrail-deploy
-  uid: 7be9919d-9af1-4e38-b771-cbfb8498a0e8
+  uid: 723842e9-315f-4c62-ac31-392a588fa0b3
 spec:
   finalizers:
   - kubernetes

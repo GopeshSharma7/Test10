@@ -22,7 +22,7 @@ data:
   SMARTNIC_VFs_QUEUE_NUM: ""
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-01-11T12:07:46Z"
+  creationTimestamp: "2023-12-27T09:47:54Z"
   name: contrail-vrouter-masters-env-configmap
   namespace: contrail
-  uid: 4851f2dd-f069-41ed-af7b-3523430283b3
+  uid: 889a0d62-5e5b-46b6-9592-cb0fd0a119d1

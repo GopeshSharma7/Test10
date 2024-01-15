@@ -1,9 +1,9 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  creationTimestamp: "2024-01-11T12:06:15Z"
+  creationTimestamp: "2023-12-27T09:46:13Z"
   name: networkpolicies.crd.projectcalico.org
-  uid: ed73dd51-8a54-45c0-8179-168951bbb2f7
+  uid: 1e768398-e2ee-4405-b06b-3a99177203b1
 spec:
   conversion:
     strategy: None
@@ -837,12 +837,12 @@ status:
     plural: networkpolicies
     singular: networkpolicy
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:15Z"
+  - lastTransitionTime: "2023-12-27T09:46:13Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:06:15Z"
+  - lastTransitionTime: "2023-12-27T09:46:13Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

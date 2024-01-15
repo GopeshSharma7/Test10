@@ -3,9 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
-  creationTimestamp: "2024-01-11T12:07:43Z"
+  creationTimestamp: "2023-12-27T09:47:51Z"
   name: contrailcertificatemanagers.configplane.juniper.net
-  uid: 068952f3-e05f-4894-8fbf-f87aa341ce0b
+  uid: f6143721-1061-4b22-beda-9637c7cd74b8
 spec:
   conversion:
     strategy: Webhook
@@ -10682,12 +10682,12 @@ status:
     plural: contrailcertificatemanagers
     singular: contrailcertificatemanager
   conditions:
-  - lastTransitionTime: "2024-01-11T12:07:44Z"
+  - lastTransitionTime: "2023-12-27T09:47:51Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:07:44Z"
+  - lastTransitionTime: "2023-12-27T09:47:51Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

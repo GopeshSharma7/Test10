@@ -4,16 +4,16 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
   name: webhook-service
   namespace: contrail-deploy
-  uid: ba1991d7-4de6-4a40-ac78-26887c75f780
+  uid: 542440d7-d74d-402a-8a49-fa81594467c9
 spec:
-  clusterIP: 10.10.10.159
+  clusterIP: 10.10.10.113
   clusterIPs:
-  - 10.10.10.159
+  - 10.10.10.113
   internalTrafficPolicy: Cluster
   ipFamilies:
   - IPv4

@@ -5,7 +5,7 @@ metadata:
     deployment.kubernetes.io/desired-replicas: "1"
     deployment.kubernetes.io/max-replicas: "2"
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2024-01-15T11:09:59Z"
+  creationTimestamp: "2024-01-15T12:15:53Z"
   labels:
     app: example-webhook
     pod-template-hash: 66f6b79986
@@ -17,8 +17,8 @@ metadata:
     controller: true
     kind: Deployment
     name: example-webhook
-    uid: 431f11b2-8832-4c8d-a610-1b087da2740e
-  uid: 8b59069e-ccc8-4c41-a2e6-84ba5be5b123
+    uid: 0db81a07-6e4c-4e86-a8c5-62ab60c786f3
+  uid: ecf196b7-5d8a-46a3-9159-66693542d2ec
 spec:
   replicas: 1
   selector:

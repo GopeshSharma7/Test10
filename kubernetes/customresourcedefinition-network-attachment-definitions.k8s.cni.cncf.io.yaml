@@ -1,9 +1,9 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  creationTimestamp: "2024-01-11T12:06:57Z"
+  creationTimestamp: "2023-12-27T09:47:05Z"
   name: network-attachment-definitions.k8s.cni.cncf.io
-  uid: 43ce3746-7161-4d05-b365-49db56660d47
+  uid: cd9dd98d-fa5b-4c3e-af2b-87712aaa6fea
 spec:
   conversion:
     strategy: None
@@ -38,12 +38,12 @@ status:
     - net-attach-def
     singular: network-attachment-definition
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:57Z"
+  - lastTransitionTime: "2023-12-27T09:47:05Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:06:57Z"
+  - lastTransitionTime: "2023-12-27T09:47:05Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

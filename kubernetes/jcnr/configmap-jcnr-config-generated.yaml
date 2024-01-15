@@ -38,9 +38,9 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
   name: jcnr-config-generated
   namespace: jcnr
-  uid: bb82413f-9828-4461-9457-b6a21d86ebab
+  uid: 7cccb3d5-c681-41a9-aebf-30e3fd37e603

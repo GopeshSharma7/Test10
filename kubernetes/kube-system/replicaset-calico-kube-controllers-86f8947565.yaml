@@ -5,7 +5,7 @@ metadata:
     deployment.kubernetes.io/desired-replicas: "1"
     deployment.kubernetes.io/max-replicas: "1"
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2024-01-11T12:06:17Z"
+  creationTimestamp: "2023-12-27T09:46:15Z"
   labels:
     k8s-app: calico-kube-controllers
     pod-template-hash: 86f8947565
@@ -17,8 +17,8 @@ metadata:
     controller: true
     kind: Deployment
     name: calico-kube-controllers
-    uid: 1fdae7a6-f104-43ef-964e-b1ec43df62f3
-  uid: a1d8c215-7235-437f-850c-973b07a4a130
+    uid: ccd6cb38-0005-4ea1-b498-7bccea0e067d
+  uid: 2c48a205-bba0-404d-b841-3ccbadde71db
 spec:
   replicas: 1
   selector:

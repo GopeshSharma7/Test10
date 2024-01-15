@@ -7,9 +7,9 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
   name: contrail-network-config
   namespace: contrail
-  uid: 66e45c5d-0a77-4806-834b-120303e1bf2c
+  uid: db686f5c-a3ee-4fdb-9c3b-9552604d90a6

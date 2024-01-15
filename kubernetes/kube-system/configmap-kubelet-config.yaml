@@ -48,7 +48,7 @@ data:
     volumeStatsAggPeriod: 0s
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   name: kubelet-config
   namespace: kube-system
-  uid: c3425fd3-c80a-4431-89fd-9d52302c52e4
+  uid: ad52ff3b-5be9-4695-b5d6-5f4bba895d2b

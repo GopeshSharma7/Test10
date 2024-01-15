@@ -4,14 +4,14 @@ metadata:
   annotations:
     pv.kubernetes.io/bind-completed: "yes"
     pv.kubernetes.io/bound-by-controller: "yes"
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:47Z"
   finalizers:
   - kubernetes.io/pvc-protection
   labels:
     k8s-app: kube-crpd-worker
   name: conf-kube-crpd-worker-sts-0
   namespace: jcnr
-  uid: 34b24b53-dcb6-4696-a616-1fef8739a86d
+  uid: 261631fc-dc39-4449-98a7-7d606265d8a5
 spec:
   accessModes:
   - ReadWriteOnce
@@ -20,7 +20,7 @@ spec:
       storage: 256Mi
   storageClassName: jcnrstorage
   volumeMode: Filesystem
-  volumeName: jcnr-pv-volume-0
+  volumeName: jcnr-pv-volume-2
 status:
   accessModes:
   - ReadWriteOnce

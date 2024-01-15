@@ -3,7 +3,7 @@ data:
   ClusterConfiguration: |
     apiServer:
       certSANs:
-      - 10.108.34.200
+      - 10.108.34.77
       - 192.168.1.2
       extraArgs:
         authorization-mode: Node,RBAC
@@ -17,7 +17,7 @@ data:
       local:
         dataDir: /var/lib/etcd
         serverCertSANs:
-        - 10.108.34.200
+        - 10.108.34.77
         - 192.168.1.2
         - localhost
         - 127.0.0.1
@@ -31,7 +31,7 @@ data:
     scheduler: {}
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-01-11T12:00:51Z"
+  creationTimestamp: "2023-12-27T09:42:47Z"
   name: kubeadm-config
   namespace: kube-system
-  uid: f5c5e124-9a59-4f64-bff8-20ad4cbf3377
+  uid: 5d155873-d322-49d3-9407-28c65e544ca9

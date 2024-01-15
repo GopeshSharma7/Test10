@@ -3,9 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: (devel)
-  creationTimestamp: "2024-01-11T12:06:15Z"
+  creationTimestamp: "2023-12-27T09:46:13Z"
   name: ipreservations.crd.projectcalico.org
-  uid: 7acdecf6-4faf-4685-85b3-f479d321379c
+  uid: 894a7d16-12c8-4785-9971-0e9b272d7bcc
 spec:
   conversion:
     strategy: None
@@ -54,12 +54,12 @@ status:
     plural: ipreservations
     singular: ipreservation
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:15Z"
+  - lastTransitionTime: "2023-12-27T09:46:13Z"
     message: no conflicts found
     reason: NoConflicts
     status: "True"
     type: NamesAccepted
-  - lastTransitionTime: "2024-01-11T12:06:15Z"
+  - lastTransitionTime: "2023-12-27T09:46:13Z"
     message: the initial names have been accepted
     reason: InitialNamesAccepted
     status: "True"

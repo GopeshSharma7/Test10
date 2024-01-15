@@ -2,31 +2,31 @@ apiVersion: v1
 kind: Endpoints
 metadata:
   annotations:
-    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-12T10:12:46Z"
-  creationTimestamp: "2024-01-11T12:01:07Z"
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-15T18:12:07Z"
+  creationTimestamp: "2023-12-27T09:43:05Z"
   labels:
     k8s-app: kube-dns
     kubernetes.io/cluster-service: "true"
     kubernetes.io/name: CoreDNS
   name: kube-dns
   namespace: kube-system
-  uid: dfc37eba-0fcc-434b-bbe0-930a506d5a3e
+  uid: cf989fb1-51e3-4ec4-8449-6f3ca94f0768
 subsets:
 - addresses:
-  - ip: 10.244.26.69
-    nodeName: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+  - ip: 10.244.100.204
+    nodeName: sharmag-k8s-master-pnad30.englab.juniper.net
     targetRef:
       kind: Pod
-      name: coredns-756994469c-zgtbh
+      name: coredns-756994469c-d5xlj
       namespace: kube-system
-      uid: 36e940bb-bc95-4415-9d51-2267aeff396c
-  - ip: 10.244.47.4
-    nodeName: trohit-k8s-master-1k3tt0.englab.juniper.net
+      uid: 01eaa7b9-9806-4321-8173-3cd80a4e1f5c
+  - ip: 10.244.35.139
+    nodeName: sharmag-k8s-dpdk-kubelet1-pnad30.englab.juniper.net
     targetRef:
       kind: Pod
-      name: coredns-756994469c-6d2mg
+      name: coredns-756994469c-pxnkd
       namespace: kube-system
-      uid: 46aabcc3-dd74-4512-a4cd-06a9f2e6cce4
+      uid: a5fa52ee-7a54-432c-9a48-cc69eda3eee5
   ports:
   - name: dns-tcp
     port: 53

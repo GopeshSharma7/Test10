@@ -7,9 +7,9 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
   name: jcnr-node-config
   namespace: jcnr
-  uid: 46f66001-3da8-4957-ba68-7e6a3f5b392f
+  uid: b2404ff0-c6c8-4a27-bbb5-d774edbce27b

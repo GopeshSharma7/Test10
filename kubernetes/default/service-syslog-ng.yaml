@@ -4,17 +4,17 @@ metadata:
   annotations:
     meta.helm.sh/release-name: jcnr
     meta.helm.sh/release-namespace: default
-  creationTimestamp: "2024-01-11T12:07:38Z"
+  creationTimestamp: "2023-12-27T09:47:46Z"
   labels:
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: syslog-ng
   name: syslog-ng
   namespace: default
-  uid: 0bbba40e-0a9c-4da9-a54a-c6484d3d1dca
+  uid: 1ded20bd-a5da-475c-b9af-a6a57efecb4a
 spec:
-  clusterIP: 10.10.10.60
+  clusterIP: 10.10.10.39
   clusterIPs:
-  - 10.10.10.60
+  - 10.10.10.39
   internalTrafficPolicy: Cluster
   ipFamilies:
   - IPv4

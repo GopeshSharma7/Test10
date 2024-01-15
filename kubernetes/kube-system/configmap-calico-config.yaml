@@ -38,7 +38,7 @@ data:
   veth_mtu: "0"
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-01-11T12:06:13Z"
+  creationTimestamp: "2023-12-27T09:46:11Z"
   name: calico-config
   namespace: kube-system
-  uid: e5141da3-3330-44eb-8662-23a1c1769a79
+  uid: eb83adca-a54c-4fab-94d3-2719dd5ac9df

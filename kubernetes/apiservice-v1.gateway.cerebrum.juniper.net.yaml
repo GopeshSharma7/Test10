@@ -1,11 +1,11 @@
 apiVersion: apiregistration.k8s.io/v1
 kind: APIService
 metadata:
-  creationTimestamp: "2024-01-15T10:09:15Z"
+  creationTimestamp: "2024-01-15T12:26:33Z"
   labels:
     kube-aggregator.kubernetes.io/automanaged: "true"
   name: v1.gateway.cerebrum.juniper.net
-  uid: 0325af5b-d651-4fc6-975b-159852b03363
+  uid: f7dfbeb1-987a-4f6f-a9a4-edb8c699c10e
 spec:
   group: gateway.cerebrum.juniper.net
   groupPriorityMinimum: 1000
@@ -13,7 +13,7 @@ spec:
   versionPriority: 100
 status:
   conditions:
-  - lastTransitionTime: "2024-01-15T10:09:15Z"
+  - lastTransitionTime: "2024-01-15T12:26:33Z"
     message: Local APIServices are always available
     reason: Local
     status: "True"

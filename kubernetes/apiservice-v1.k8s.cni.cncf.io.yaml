@@ -1,11 +1,11 @@
 apiVersion: apiregistration.k8s.io/v1
 kind: APIService
 metadata:
-  creationTimestamp: "2024-01-11T12:06:57Z"
+  creationTimestamp: "2023-12-27T09:47:05Z"
   labels:
     kube-aggregator.kubernetes.io/automanaged: "true"
   name: v1.k8s.cni.cncf.io
-  uid: c18b3fbc-dfad-4836-a9ed-10369028741a
+  uid: 64891044-cbef-4da6-addd-98b526302f17
 spec:
   group: k8s.cni.cncf.io
   groupPriorityMinimum: 1000
@@ -13,7 +13,7 @@ spec:
   versionPriority: 100
 status:
   conditions:
-  - lastTransitionTime: "2024-01-11T12:06:57Z"
+  - lastTransitionTime: "2023-12-27T09:47:05Z"
     message: Local APIServices are always available
     reason: Local
     status: "True"
