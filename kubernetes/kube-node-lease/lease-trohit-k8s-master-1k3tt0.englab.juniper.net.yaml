@@ -13,4 +13,4 @@ metadata:
 spec:
   holderIdentity: trohit-k8s-master-1k3tt0.englab.juniper.net
   leaseDurationSeconds: 40
-  renewTime: "2024-01-15T13:25:49.029815Z"
+  renewTime: "2024-01-15T13:25:59.356446Z"
