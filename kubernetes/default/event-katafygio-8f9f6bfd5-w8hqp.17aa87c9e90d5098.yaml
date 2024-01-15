@@ -1,20 +1,8 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2024-01-15T13:18:30Z"
-deprecatedLastTimestamp: "2024-01-15T13:18:30Z"
-deprecatedSource:
-  component: kubelet
-  host: trohit-k8s-master-1k3tt0.englab.juniper.net
+apiVersion: v1
+count: 1
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2024-01-15T13:18:30Z"
-  name: katafygio-8f9f6bfd5-w8hqp.17aa87c9e90d5098
-  namespace: default
-  uid: d3a935f1-7c91-4ff1-8bdd-f347471293e9
-note: Stopping container katafygio
-reason: Killing
-regarding:
+firstTimestamp: "2024-01-15T13:18:30Z"
+involvedObject:
   apiVersion: v1
   fieldPath: spec.containers{katafygio}
   kind: Pod
@@ -22,6 +10,18 @@ regarding:
   namespace: default
   resourceVersion: "512589"
   uid: 10b6bf53-5305-45d5-9b08-837f04ebbef2
-reportingController: kubelet
+kind: Event
+lastTimestamp: "2024-01-15T13:18:30Z"
+message: Stopping container katafygio
+metadata:
+  creationTimestamp: "2024-01-15T13:18:30Z"
+  name: katafygio-8f9f6bfd5-w8hqp.17aa87c9e90d5098
+  namespace: default
+  uid: d3a935f1-7c91-4ff1-8bdd-f347471293e9
+reason: Killing
+reportingComponent: kubelet
 reportingInstance: trohit-k8s-master-1k3tt0.englab.juniper.net
+source:
+  component: kubelet
+  host: trohit-k8s-master-1k3tt0.englab.juniper.net
 type: Normal
