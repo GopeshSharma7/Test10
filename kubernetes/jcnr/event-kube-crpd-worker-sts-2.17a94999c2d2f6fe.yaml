@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 1180
+deprecatedCount: 1181
 deprecatedFirstTimestamp: "2024-01-11T12:07:38Z"
-deprecatedLastTimestamp: "2024-01-15T13:49:02Z"
+deprecatedLastTimestamp: "2024-01-15T13:54:02Z"
 deprecatedSource:
   component: default-scheduler
 eventTime: null
