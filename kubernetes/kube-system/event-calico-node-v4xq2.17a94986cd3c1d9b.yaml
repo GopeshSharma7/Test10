@@ -1,7 +1,7 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 4669
+deprecatedCount: 4673
 deprecatedFirstTimestamp: "2024-01-11T12:06:17Z"
-deprecatedLastTimestamp: "2024-01-15T13:47:17Z"
+deprecatedLastTimestamp: "2024-01-15T13:52:07Z"
 deprecatedSource:
   component: kubelet
   host: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
