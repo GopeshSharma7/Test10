@@ -1,27 +1,27 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 3609
-deprecatedFirstTimestamp: "2024-01-12T10:12:44Z"
-deprecatedLastTimestamp: "2024-01-15T13:48:23Z"
-deprecatedSource:
-  component: kubelet
-  host: trohit-k8s-master-1k3tt0.englab.juniper.net
+apiVersion: v1
+count: 3613
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2024-01-12T10:12:44Z"
-  name: coredns-756994469c-6d2mg.17a991e90e2aa0a2
-  namespace: kube-system
-  uid: 29b9b2c7-8e22-4770-8e9f-598c21ab122b
-note: 'Nameserver limits were exceeded, some nameservers have been omitted, the applied
-  nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
-reason: DNSConfigForming
-regarding:
+firstTimestamp: "2024-01-12T10:12:44Z"
+involvedObject:
   apiVersion: v1
   kind: Pod
   name: coredns-756994469c-6d2mg
   namespace: kube-system
   resourceVersion: "119351"
   uid: 46aabcc3-dd74-4512-a4cd-06a9f2e6cce4
-reportingController: kubelet
+kind: Event
+lastTimestamp: "2024-01-15T13:53:11Z"
+message: 'Nameserver limits were exceeded, some nameservers have been omitted, the
+  applied nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
+metadata:
+  creationTimestamp: "2024-01-12T10:12:44Z"
+  name: coredns-756994469c-6d2mg.17a991e90e2aa0a2
+  namespace: kube-system
+  uid: 29b9b2c7-8e22-4770-8e9f-598c21ab122b
+reason: DNSConfigForming
+reportingComponent: kubelet
 reportingInstance: trohit-k8s-master-1k3tt0.englab.juniper.net
+source:
+  component: kubelet
+  host: trohit-k8s-master-1k3tt0.englab.juniper.net
 type: Warning
