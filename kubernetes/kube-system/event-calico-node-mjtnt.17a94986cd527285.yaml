@@ -1,27 +1,27 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 4660
-deprecatedFirstTimestamp: "2024-01-11T12:06:17Z"
-deprecatedLastTimestamp: "2024-01-15T13:36:37Z"
-deprecatedSource:
-  component: kubelet
-  host: trohit-k8s-master-1k3tt0.englab.juniper.net
+apiVersion: v1
+count: 4664
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2024-01-11T12:06:17Z"
-  name: calico-node-mjtnt.17a94986cd527285
-  namespace: kube-system
-  uid: ad69f8bf-65bb-4f00-b561-4815908f44c2
-note: 'Nameserver limits were exceeded, some nameservers have been omitted, the applied
-  nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
-reason: DNSConfigForming
-regarding:
+firstTimestamp: "2024-01-11T12:06:17Z"
+involvedObject:
   apiVersion: v1
   kind: Pod
   name: calico-node-mjtnt
   namespace: kube-system
   resourceVersion: "963"
   uid: a847c8eb-f512-468e-a65c-7a35ad266809
-reportingController: kubelet
+kind: Event
+lastTimestamp: "2024-01-15T13:41:37Z"
+message: 'Nameserver limits were exceeded, some nameservers have been omitted, the
+  applied nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
+metadata:
+  creationTimestamp: "2024-01-11T12:06:17Z"
+  name: calico-node-mjtnt.17a94986cd527285
+  namespace: kube-system
+  uid: ad69f8bf-65bb-4f00-b561-4815908f44c2
+reason: DNSConfigForming
+reportingComponent: kubelet
 reportingInstance: trohit-k8s-master-1k3tt0.englab.juniper.net
+source:
+  component: kubelet
+  host: trohit-k8s-master-1k3tt0.englab.juniper.net
 type: Warning
