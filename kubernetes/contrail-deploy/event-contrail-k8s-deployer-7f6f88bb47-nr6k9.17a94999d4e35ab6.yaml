@@ -1,27 +1,27 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 4680
-deprecatedFirstTimestamp: "2024-01-11T12:07:38Z"
-deprecatedLastTimestamp: "2024-01-15T13:57:39Z"
-deprecatedSource:
-  component: kubelet
-  host: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+apiVersion: v1
+count: 4680
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2024-01-11T12:07:38Z"
-  name: contrail-k8s-deployer-7f6f88bb47-nr6k9.17a94999d4e35ab6
-  namespace: contrail-deploy
-  uid: c38643a3-de1d-409b-8a9f-89a4755189aa
-note: 'Nameserver limits were exceeded, some nameservers have been omitted, the applied
-  nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
-reason: DNSConfigForming
-regarding:
+firstTimestamp: "2024-01-11T12:07:38Z"
+involvedObject:
   apiVersion: v1
   kind: Pod
   name: contrail-k8s-deployer-7f6f88bb47-nr6k9
   namespace: contrail-deploy
   resourceVersion: "1351"
   uid: c7d1115b-1ef0-415a-afec-5600e33d271e
-reportingController: kubelet
+kind: Event
+lastTimestamp: "2024-01-15T13:57:39Z"
+message: 'Nameserver limits were exceeded, some nameservers have been omitted, the
+  applied nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
+metadata:
+  creationTimestamp: "2024-01-11T12:07:38Z"
+  name: contrail-k8s-deployer-7f6f88bb47-nr6k9.17a94999d4e35ab6
+  namespace: contrail-deploy
+  uid: c38643a3-de1d-409b-8a9f-89a4755189aa
+reason: DNSConfigForming
+reportingComponent: kubelet
 reportingInstance: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+source:
+  component: kubelet
+  host: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
 type: Warning
