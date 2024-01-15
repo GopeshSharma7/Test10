@@ -1,5 +1,5 @@
 apiVersion: v1
-count: 23402
+count: 23422
 eventTime: null
 firstTimestamp: "2024-01-11T12:07:51Z"
 involvedObject:
@@ -10,7 +10,7 @@ involvedObject:
   resourceVersion: "1372"
   uid: 8ba4dd88-3655-4847-90a3-4f63aeb399c7
 kind: Event
-lastTimestamp: "2024-01-15T13:37:51Z"
+lastTimestamp: "2024-01-15T13:42:51Z"
 message: waiting for pod kube-crpd-worker-sts-2 to be scheduled
 metadata:
   creationTimestamp: "2024-01-11T12:07:51Z"
