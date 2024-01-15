@@ -10,4 +10,4 @@ spec:
   holderIdentity: trohit-k8s-master-1k3tt0.englab.juniper.net_c9a46abc-a759-4afa-9fc3-981c3210731d
   leaseDurationSeconds: 15
   leaseTransitions: 0
-  renewTime: "2024-01-15T13:30:00.541249Z"
+  renewTime: "2024-01-15T13:30:10.598904Z"
