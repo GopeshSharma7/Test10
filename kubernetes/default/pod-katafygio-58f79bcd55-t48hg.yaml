@@ -24,6 +24,8 @@ metadata:
           "dns": {}
       }]
   creationTimestamp: "2024-01-15T13:19:31Z"
+  deletionGracePeriodSeconds: 30
+  deletionTimestamp: "2024-01-15T14:05:30Z"
   generateName: katafygio-58f79bcd55-
   labels:
     app: katafygio

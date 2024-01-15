@@ -1,27 +1,27 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 4682
-deprecatedFirstTimestamp: "2024-01-11T12:07:40Z"
-deprecatedLastTimestamp: "2024-01-15T14:03:08Z"
-deprecatedSource:
-  component: kubelet
-  host: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+apiVersion: v1
+count: 4682
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2024-01-11T12:07:40Z"
-  name: kube-crpd-worker-sts-0.17a9499a12739e3e
-  namespace: jcnr
-  uid: f1d8da5a-bc22-4114-893d-cfd2a8a6b498
-note: 'Nameserver limits were exceeded, some nameservers have been omitted, the applied
-  nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
-reason: DNSConfigForming
-regarding:
+firstTimestamp: "2024-01-11T12:07:40Z"
+involvedObject:
   apiVersion: v1
   kind: Pod
   name: kube-crpd-worker-sts-0
   namespace: jcnr
   resourceVersion: "1409"
   uid: e3b3854c-bab5-423e-9098-b414806a72fa
-reportingController: kubelet
+kind: Event
+lastTimestamp: "2024-01-15T14:03:08Z"
+message: 'Nameserver limits were exceeded, some nameservers have been omitted, the
+  applied nameserver line is: 10.84.5.101 172.21.200.60 66.129.233.81'
+metadata:
+  creationTimestamp: "2024-01-11T12:07:40Z"
+  name: kube-crpd-worker-sts-0.17a9499a12739e3e
+  namespace: jcnr
+  uid: f1d8da5a-bc22-4114-893d-cfd2a8a6b498
+reason: DNSConfigForming
+reportingComponent: kubelet
 reportingInstance: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
+source:
+  component: kubelet
+  host: trohit-k8s-dpdk-kubelet1-1k3tt0.englab.juniper.net
 type: Warning
