@@ -52,25 +52,25 @@ status:
     reason: CalicoIsUp
     status: "False"
     type: NetworkUnavailable
-  - lastHeartbeatTime: "2024-01-15T18:16:52Z"
+  - lastHeartbeatTime: "2024-01-16T06:06:08Z"
     lastTransitionTime: "2023-12-27T09:42:45Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2024-01-15T18:16:52Z"
+  - lastHeartbeatTime: "2024-01-16T06:06:08Z"
     lastTransitionTime: "2023-12-27T09:42:45Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2024-01-15T18:16:52Z"
+  - lastHeartbeatTime: "2024-01-16T06:06:08Z"
     lastTransitionTime: "2023-12-27T09:42:45Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2024-01-15T18:16:52Z"
+  - lastHeartbeatTime: "2024-01-16T06:06:08Z"
     lastTransitionTime: "2023-12-27T09:42:46Z"
     message: kubelet is posting ready status. AppArmor enabled
     reason: KubeletReady
@@ -151,6 +151,10 @@ status:
     - 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter@sha256:1a3552e8fa2c35e7034b0a91813d71c3131c79812483e37484581f1b08439cdf
     - 10.108.30.10:5000/atom-docker/cn2/bazel-build/dev/x86_64/contrail-telemetry-exporter:master
     sizeBytes: 70061292
+  - names:
+    - svl-artifactory.juniper.net/atom-docker/cn2/trohit7/katafygio@sha256:2001d4904868815412fe5b91ea0035845a63f50bc08c17aa6e8f1872a6189e80
+    - svl-artifactory.juniper.net/atom-docker/cn2/trohit7/katafygio:includekind15
+    sizeBytes: 69205638
   - names:
     - svl-artifactory.juniper.net/atom-docker/cn2/trohit7/katafygio@sha256:c354c3ce537803d6e2afc20d8da3b79b5809c53411fa7719e2dec1859192b92c
     - svl-artifactory.juniper.net/atom-docker/cn2/trohit7/katafygio:rmvstatus

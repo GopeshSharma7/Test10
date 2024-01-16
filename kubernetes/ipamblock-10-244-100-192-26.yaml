@@ -20,10 +20,10 @@ spec:
   - null
   - null
   - null
+  - null
   - 1
+  - null
   - 2
-  - null
-  - null
   - null
   - null
   - null
@@ -78,21 +78,21 @@ spec:
     secondary:
       node: sharmag-k8s-master-pnad30.englab.juniper.net
       type: ipipTunnelAddress
-  - handle_id: k8s-pod-network.d2882cba3568888772bed3442086fbdda177630d9b40343e62d4f64587e6214a
-    secondary:
-      namespace: default
-      node: sharmag-k8s-master-pnad30.englab.juniper.net
-      pod: katafygio-767758478c-89n9d
-      timestamp: 2024-01-10 07:14:15.196728248 +0000 UTC
   - handle_id: k8s-pod-network.369b8cf5712df16c2824b1e2b0eddcb8d6de99d270eaee2849abafe92351732b
     secondary:
       namespace: kube-system
       node: sharmag-k8s-master-pnad30.englab.juniper.net
       pod: coredns-756994469c-d5xlj
       timestamp: 2024-01-15 18:12:06.894263088 +0000 UTC
+  - handle_id: k8s-pod-network.482a2c4d0f4b4f064cd899bdcac4e37ea776300a56864812dceae4acb843d1ed
+    secondary:
+      namespace: default
+      node: sharmag-k8s-master-pnad30.englab.juniper.net
+      pod: katafygio-767758478c-8hmsh
+      timestamp: 2024-01-16 05:19:40.088156056 +0000 UTC
   cidr: 10.244.100.192/26
   deleted: false
-  sequenceNumber: 1703670389193232361
+  sequenceNumber: 1703670389193232365
   sequenceNumberForAllocation:
     "0": 1703670389193232338
     "1": 1703670389193232339
@@ -107,10 +107,10 @@ spec:
     "10": 1703670389193232355
     "11": 1703670389193232357
     "12": 1703670389193232359
+    "13": 1703670389193232362
+    "14": 1703670389193232364
   strictAffinity: false
   unallocated:
-  - 13
-  - 14
   - 15
   - 16
   - 17
@@ -170,3 +170,5 @@ spec:
   - 10
   - 1
   - 2
+  - 11
+  - 13

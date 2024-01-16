@@ -6,7 +6,7 @@ metadata:
       {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"labels":{"app":"katafygio","chart":"katafygio-0.5.1","heritage":"Helm","release":"katafygio"},"name":"katafygio","namespace":"default"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"1Gi"}}}}
     pv.kubernetes.io/bind-completed: "yes"
     pv.kubernetes.io/bound-by-controller: "yes"
-  creationTimestamp: "2024-01-10T07:14:14Z"
+  creationTimestamp: "2024-01-16T05:19:39Z"
   finalizers:
   - kubernetes.io/pvc-protection
   labels:
@@ -16,7 +16,7 @@ metadata:
     release: katafygio
   name: katafygio
   namespace: default
-  uid: 09bd7396-3885-4dd4-baaf-c67f2ed41ec7
+  uid: 672e1953-9e60-4a99-ab55-92d72ed0a049
 spec:
   accessModes:
   - ReadWriteOnce

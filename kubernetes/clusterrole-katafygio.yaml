@@ -4,14 +4,14 @@ metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"annotations":{},"labels":{"app":"katafygio","chart":"katafygio-0.5.1","heritage":"Helm","release":"katafygio"},"name":"katafygio"},"rules":[{"apiGroups":["*"],"resources":["*"],"verbs":["get","list","watch"]}]}
-  creationTimestamp: "2024-01-10T07:14:14Z"
+  creationTimestamp: "2024-01-16T05:19:39Z"
   labels:
     app: katafygio
     chart: katafygio-0.5.1
     heritage: Helm
     release: katafygio
   name: katafygio
-  uid: 54a5dcb4-18cd-42d3-8c7c-c55fa0591a06
+  uid: a0f1159b-3e04-4b80-b5af-b1c4f1bc690f
 rules:
 - apiGroups:
   - '*'

@@ -5,7 +5,7 @@ metadata:
     deployment.kubernetes.io/desired-replicas: "1"
     deployment.kubernetes.io/max-replicas: "1"
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2024-01-10T07:14:14Z"
+  creationTimestamp: "2024-01-16T05:19:39Z"
   labels:
     app: katafygio
     chart: katafygio-0.5.1
@@ -20,8 +20,8 @@ metadata:
     controller: true
     kind: Deployment
     name: katafygio
-    uid: 5de6bd4e-0ecd-4048-bf9f-d0b596cd8384
-  uid: d8a8e448-4477-4437-8ee3-ddfc94f78247
+    uid: 3391ea08-22f4-4582-ba4f-611ae77407c6
+  uid: 0a746eb1-694f-453f-a1da-4c934530bfa9
 spec:
   replicas: 1
   selector:
