@@ -1,25 +1,23 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-16T05:19:40Z"
+deprecatedLastTimestamp: "2024-01-16T05:19:40Z"
+deprecatedSource:
+  component: multus
 eventTime: null
-firstTimestamp: "2024-01-16T05:19:40Z"
-involvedObject:
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-16T05:19:40Z"
+  name: katafygio-767758478c-8hmsh.17aabc3d448d6095
+  namespace: default
+  uid: 033e35a6-387d-45df-b57b-df10ef1cb44e
+note: Add eth0 [10.244.100.206/32] from k8s-pod-network
+reason: AddedInterface
+regarding:
   apiVersion: v1
   kind: Pod
   name: katafygio-767758478c-8hmsh
   namespace: default
   resourceVersion: "2529961"
   uid: 2a81751e-3d3d-444a-8658-00bba5e05cdf
-kind: Event
-lastTimestamp: "2024-01-16T05:19:40Z"
-message: Add eth0 [10.244.100.206/32] from k8s-pod-network
-metadata:
-  creationTimestamp: "2024-01-16T05:19:40Z"
-  name: katafygio-767758478c-8hmsh.17aabc3d448d6095
-  namespace: default
-  uid: 033e35a6-387d-45df-b57b-df10ef1cb44e
-reason: AddedInterface
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: multus
 type: Normal

@@ -1,27 +1,27 @@
-apiVersion: v1
-count: 7
+apiVersion: events.k8s.io/v1
+deprecatedCount: 7
+deprecatedFirstTimestamp: "2024-01-16T05:13:14Z"
+deprecatedLastTimestamp: "2024-01-16T05:13:46Z"
+deprecatedSource:
+  component: kubelet
+  host: sharmag-k8s-master-pnad30.englab.juniper.net
 eventTime: null
-firstTimestamp: "2024-01-16T05:13:14Z"
-involvedObject:
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-16T05:13:14Z"
+  name: katafygio-58fd68cf9c-mzt9f.17aabbe36f8037c5
+  namespace: default
+  uid: 4421d84d-6fe5-4e2f-b6cc-5e465525a27d
+note: 'MountVolume.SetUp failed for volume "config-volume" : configmap "katafygio-config"
+  not found'
+reason: FailedMount
+regarding:
   apiVersion: v1
   kind: Pod
   name: katafygio-58fd68cf9c-mzt9f
   namespace: default
   resourceVersion: "2529290"
   uid: 0e32944d-c91f-4fa6-8829-209e6162b897
-kind: Event
-lastTimestamp: "2024-01-16T05:13:46Z"
-message: 'MountVolume.SetUp failed for volume "config-volume" : configmap "katafygio-config"
-  not found'
-metadata:
-  creationTimestamp: "2024-01-16T05:13:14Z"
-  name: katafygio-58fd68cf9c-mzt9f.17aabbe36f8037c5
-  namespace: default
-  uid: 4421d84d-6fe5-4e2f-b6cc-5e465525a27d
-reason: FailedMount
-reportingComponent: kubelet
+reportingController: kubelet
 reportingInstance: sharmag-k8s-master-pnad30.englab.juniper.net
-source:
-  component: kubelet
-  host: sharmag-k8s-master-pnad30.englab.juniper.net
 type: Warning

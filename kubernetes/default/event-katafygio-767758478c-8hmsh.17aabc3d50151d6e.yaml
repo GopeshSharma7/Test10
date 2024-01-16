@@ -1,8 +1,20 @@
-apiVersion: v1
-count: 1
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-16T05:19:40Z"
+deprecatedLastTimestamp: "2024-01-16T05:19:40Z"
+deprecatedSource:
+  component: kubelet
+  host: sharmag-k8s-master-pnad30.englab.juniper.net
 eventTime: null
-firstTimestamp: "2024-01-16T05:19:40Z"
-involvedObject:
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-16T05:19:40Z"
+  name: katafygio-767758478c-8hmsh.17aabc3d50151d6e
+  namespace: default
+  uid: ce9a7e2a-2d2a-470f-af16-7fe5e903c3f5
+note: Created container katafygio
+reason: Created
+regarding:
   apiVersion: v1
   fieldPath: spec.containers{katafygio}
   kind: Pod
@@ -10,18 +22,6 @@ involvedObject:
   namespace: default
   resourceVersion: "2529956"
   uid: 2a81751e-3d3d-444a-8658-00bba5e05cdf
-kind: Event
-lastTimestamp: "2024-01-16T05:19:40Z"
-message: Created container katafygio
-metadata:
-  creationTimestamp: "2024-01-16T05:19:40Z"
-  name: katafygio-767758478c-8hmsh.17aabc3d50151d6e
-  namespace: default
-  uid: ce9a7e2a-2d2a-470f-af16-7fe5e903c3f5
-reason: Created
-reportingComponent: kubelet
+reportingController: kubelet
 reportingInstance: sharmag-k8s-master-pnad30.englab.juniper.net
-source:
-  component: kubelet
-  host: sharmag-k8s-master-pnad30.englab.juniper.net
 type: Normal
