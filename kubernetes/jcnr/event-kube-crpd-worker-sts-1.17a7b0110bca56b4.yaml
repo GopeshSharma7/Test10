@@ -23,7 +23,7 @@ reason: FailedScheduling
 reportingComponent: default-scheduler
 reportingInstance: default-scheduler-sharmag-k8s-master-pnad30.englab.juniper.net
 series:
-  count: 2729
-  lastObservedTime: "2024-01-15T18:00:38.550064Z"
+  count: 2876
+  lastObservedTime: "2024-01-16T05:59:09.388894Z"
 source: {}
 type: Warning

@@ -1,0 +1,24 @@
+action: Binding
+apiVersion: v1
+eventTime: "2024-01-16T05:13:13.812436Z"
+firstTimestamp: null
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: katafygio-58fd68cf9c-mzt9f
+  namespace: default
+  resourceVersion: "2529287"
+  uid: 0e32944d-c91f-4fa6-8829-209e6162b897
+kind: Event
+lastTimestamp: null
+message: Successfully assigned default/katafygio-58fd68cf9c-mzt9f to sharmag-k8s-master-pnad30.englab.juniper.net
+metadata:
+  creationTimestamp: "2024-01-16T05:13:13Z"
+  name: katafygio-58fd68cf9c-mzt9f.17aabbe34b89c19c
+  namespace: default
+  uid: f4cf7489-f573-4143-b433-757b21f0619a
+reason: Scheduled
+reportingComponent: default-scheduler
+reportingInstance: default-scheduler-sharmag-k8s-master-pnad30.englab.juniper.net
+source: {}
+type: Normal

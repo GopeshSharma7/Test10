@@ -5,11 +5,11 @@ metadata:
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"v1","kind":"PersistentVolume","metadata":{"annotations":{},"name":"katafygio-pv"},"spec":{"accessModes":["ReadWriteOnce"],"capacity":{"storage":"10Gi"},"hostPath":{"path":"/katafygio/data"}}}
     pv.kubernetes.io/bound-by-controller: "yes"
-  creationTimestamp: "2024-01-10T07:14:08Z"
+  creationTimestamp: "2024-01-16T05:19:30Z"
   finalizers:
   - kubernetes.io/pv-protection
   name: katafygio-pv
-  uid: 40d948af-ba54-4e1a-b13c-20831aef73f6
+  uid: eed21255-04eb-4131-af23-806c8e65ab95
 spec:
   accessModes:
   - ReadWriteOnce
@@ -20,8 +20,8 @@ spec:
     kind: PersistentVolumeClaim
     name: katafygio
     namespace: default
-    resourceVersion: "1777246"
-    uid: 09bd7396-3885-4dd4-baaf-c67f2ed41ec7
+    resourceVersion: "2529942"
+    uid: 672e1953-9e60-4a99-ab55-92d72ed0a049
   hostPath:
     path: /katafygio/data
     type: ""

@@ -1,0 +1,27 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-16T05:14:51Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{katafygio}
+  kind: Pod
+  name: katafygio-58fd68cf9c-bts4d
+  namespace: default
+  resourceVersion: "2529475"
+  uid: 796a3b82-f577-4b5a-a6e0-7034a0544e5b
+kind: Event
+lastTimestamp: "2024-01-16T05:14:51Z"
+message: Started container katafygio
+metadata:
+  creationTimestamp: "2024-01-16T05:14:51Z"
+  name: katafygio-58fd68cf9c-bts4d.17aabbfa008a5255
+  namespace: default
+  uid: 76df9e72-e5a0-4718-85af-07bbc7c50542
+reason: Started
+reportingComponent: kubelet
+reportingInstance: sharmag-k8s-master-pnad30.englab.juniper.net
+source:
+  component: kubelet
+  host: sharmag-k8s-master-pnad30.englab.juniper.net
+type: Normal

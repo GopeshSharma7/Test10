@@ -3,6 +3,7 @@ data:
   katafygio.yaml: |
     log-level: "info"
     log-output: "stderr"
+    local-dir: /var/cache/katafygio
     git-url: https://trohit7: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@github.com/trohit7/testing2.git
     healthcheck-port: 8080
     resync-interval: 900
@@ -15,8 +16,8 @@ kind: ConfigMap
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"v1","data":{"katafygio.yaml":"log-level: \"info\"\nlog-output: \"stderr\"\ngit-url: https://trohit7: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@github.com/trohit7/testing2.git\nhealthcheck-port: 8080\nresync-interval: 900\ninclude-kind:\n  - CustomResourceDefinition\n  - DemoResource\n  - CronTab\n  - EVPN\n"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"katafygio-config","namespace":"default"}}
-  creationTimestamp: "2024-01-15T11:11:05Z"
+      {"apiVersion":"v1","data":{"katafygio.yaml":"log-level: \"info\"\nlog-output: \"stderr\"\nlocal-dir: /var/cache/katafygio\ngit-url: https://trohit7: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@github.com/trohit7/testing2.git\nhealthcheck-port: 8080\nresync-interval: 900\ninclude-kind:\n  - CustomResourceDefinition\n  - DemoResource\n  - CronTab\n  - EVPN\n"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"katafygio-config","namespace":"default"}}
+  creationTimestamp: "2024-01-16T05:14:33Z"
   name: katafygio-config
   namespace: default
-  uid: 2867c3ac-5ba0-4f66-834a-1622cc869a25
+  uid: 87f9563e-4630-411c-bfbc-d49f22e9540f
