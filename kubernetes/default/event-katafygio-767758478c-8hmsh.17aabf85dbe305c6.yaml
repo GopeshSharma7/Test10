@@ -1,0 +1,27 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-16T06:19:50Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{katafygio}
+  kind: Pod
+  name: katafygio-767758478c-8hmsh
+  namespace: default
+  resourceVersion: "2529956"
+  uid: 2a81751e-3d3d-444a-8658-00bba5e05cdf
+kind: Event
+lastTimestamp: "2024-01-16T06:19:50Z"
+message: Stopping container katafygio
+metadata:
+  creationTimestamp: "2024-01-16T06:19:50Z"
+  name: katafygio-767758478c-8hmsh.17aabf85dbe305c6
+  namespace: default
+  uid: e53b7876-9252-4a29-88d7-657c326d81b6
+reason: Killing
+reportingComponent: kubelet
+reportingInstance: sharmag-k8s-master-pnad30.englab.juniper.net
+source:
+  component: kubelet
+  host: sharmag-k8s-master-pnad30.englab.juniper.net
+type: Normal
