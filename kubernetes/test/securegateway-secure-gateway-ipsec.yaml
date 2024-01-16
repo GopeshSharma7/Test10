@@ -7,7 +7,8 @@ metadata:
   creationTimestamp: "2024-01-16T06:08:03Z"
   labels:
     author: kubernetes-admin
-    operation: CREATE
+    check: working
+    operation: UPDATE
   name: secure-gateway-ipsec
   namespace: test
   uid: 9fa763a8-9aaf-4c8a-bf8d-e4890e6c8731
